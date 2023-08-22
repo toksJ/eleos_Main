@@ -52,9 +52,9 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
                     
-                  Button("Log In") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
+                    NavigationLink(destination: TabsView(), label: {
+                        Text("Log In ")
+                    })
                         
                         
                     .foregroundColor(.white)
@@ -151,9 +151,9 @@ struct SignUpView: View {
                     
                     
                     
-                    Button("Sign up") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
+                    NavigationLink(destination: TabsView(), label: {
+                        Text("Sign up ")
+                    })
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.blue)
