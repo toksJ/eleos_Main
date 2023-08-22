@@ -81,6 +81,7 @@ struct Home: View {
                                 
                                 NavigationLink(destination: ApperanceView(), label: {
                                     Text("Apperance")
+                                    Image(systemName: "paintbrush.fill").offset(x: 175)
                                 })
                             }
                             
@@ -100,21 +101,30 @@ struct Home: View {
                                 
                                 NavigationLink(destination: QuestionsView(), label: {
                                     Text("Questions")
+                                    Image(systemName: "questionmark.folder.fill").offset(x: 175)
+
                                 })
                                 NavigationLink(destination: ToDoListView(), label: {
                                     Text("To-Do List")
+                                    Image(systemName: "list.bullet.clipboard.fill").offset(x: 175)
+
                                 })
                                 NavigationLink(destination: DropsView(), label: {
                                     Text("Drops")
+                                    Image(systemName: "pipe.and.drop.fill").offset(x: 205)
                                 })
                                 NavigationLink(destination: PlantsView(), label: {
                                     Text("Plants")
+                                    Image(systemName: "arrow.up.bin.fill").offset(x: 205)
                                 })
                             }
                             
                             Section("More"){
                                 NavigationLink(destination: CreatorsView(), label: {
                                     Text("About us")
+                                    Image(systemName: "person.2.fill").offset(x: 175)
+
+
                                 })
                             }
                             
@@ -193,8 +203,7 @@ struct Home: View {
     struct ApperanceView: View {
         @State private var FontSize = 0
         @State private var iconSize = 0.0
-        
-        
+
         var body: some View {
             Form {
                 
