@@ -27,7 +27,7 @@ struct CircularProgressView: View {
                 .foregroundColor(.blue)
                 .rotationEffect(Angle(degrees: 270))
             
-            Image("plant 1")
+            Image("monstera")
                 .resizable()
                 .scaledToFit()
                 .offset(x: 25, y: -8)

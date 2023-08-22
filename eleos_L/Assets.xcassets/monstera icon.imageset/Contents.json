@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "EC1530E8-E317-49C6-89B5-3DFEFA5E12E1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "monstera icon.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "3D05E4FD-9DA6-4024-8B2D-33EB9D7C8887.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "prayer plant.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
