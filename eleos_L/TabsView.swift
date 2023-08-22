@@ -17,10 +17,10 @@ struct TabsView: View {
                                 Text("Home")
                             }
                         
-                        ToDoList()
+                        CircularProgressView(progress: 0.25)
                             .tabItem {
-                                Image(systemName: "list.bullet.below.rectangle")
-                                Text("To Do List")
+                                Image(systemName: "house.fill")
+                                Text("Home")
                             }
                     
                         Plants()

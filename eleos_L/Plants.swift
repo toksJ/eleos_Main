@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Plants: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("plants is here")
     }
 }
 
@@ -18,3 +18,4 @@ struct Plants_Previews: PreviewProvider {
         Plants()
     }
 }
+
