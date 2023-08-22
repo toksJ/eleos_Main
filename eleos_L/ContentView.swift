@@ -73,8 +73,9 @@ struct ContentView: View {
                     
                         .padding()
 
-                    Button("skip") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/}
+                    NavigationLink(destination: QuestionMainView(), label: {
+                        Text("Skip ")
+                    })
                                .padding(5)
                                         }
 
@@ -163,9 +164,9 @@ struct SignUpView: View {
                     })
                     
                     .padding()
-                    Button("Skip") {
-                                           /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                                       }
+                    NavigationLink(destination: QuestionMainView(), label: {
+                        Text("Skip ")
+                    })
                                        .padding(5)
                     }
                   
@@ -179,6 +180,36 @@ struct SignUpView: View {
             }.navigationBarHidden(true)
         }
     }
+
+struct QuestionMainView: View {
+    @State var score = 0
+    
+    var body: some View {
+        NavigationView{
+            VStack(spacing: 20){
+                Image("startpic")
+                    .resizable()
+                    .scaledToFit()
+                Text("we are gonnna go on a little journey answer tr uthfully, ready? ")
+                    .font(.body)
+                    .bold()
+                    .padding(15)
+                    .accentColor(.black)
+                    .dynamicTypeSize(.xLarge)
+                    .allowsTightening(true)
+                    .autocapitalization(.allCharacters)
+                    .multilineTextAlignment(.center)
+                
+                NavigationLink(destination: Quiz1()) {
+                    Text("Ready !")
+                    
+                }
+            }
+         
+        }.navigationBarHidden(true)
+    }
+}
+    
 
 
 
