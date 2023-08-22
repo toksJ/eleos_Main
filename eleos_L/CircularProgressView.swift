@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct CircularProgressView: View {
-
+    
     var progress: CGFloat
-
+    
+    
     var body: some View {
         ZStack{
             Circle()
                 .stroke(lineWidth: 20)
                 .opacity(0.3)
                 .foregroundColor(.blue)
-
-
-
+            
+            
+            
             Circle()
                 .trim(from: 0, to: progress)
                 .stroke(style: .init(lineWidth: 20.0,lineCap: .round,lineJoin: .round))
                 .foregroundColor(.blue)
                 .rotationEffect(Angle(degrees: 270))
-
+            
             Image("plant 1")
                 .resizable()
                 .scaledToFit()
@@ -33,7 +34,12 @@ struct CircularProgressView: View {
             
         }
     }
+    
+    
 }
+
+
+
 
 struct levelView: View {
 
