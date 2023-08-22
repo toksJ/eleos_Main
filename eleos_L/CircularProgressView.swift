@@ -26,9 +26,10 @@ struct CircularProgressView: View {
                 .foregroundColor(.blue)
                 .rotationEffect(Angle(degrees: 270))
 
-            Image("drops")
+            Image("plant 1")
                 .resizable()
                 .scaledToFit()
+            
         }
     }
 }
@@ -95,7 +96,6 @@ struct levelView: View {
                 .bold()
                 .padding()
             
-            levelView(score: 2, totallevels: 5)
 
         }
     }

@@ -19,8 +19,8 @@ struct TabsView: View {
                         
                         CircularProgressView(progress: 0.25)
                             .tabItem {
-                                Image(systemName: "house.fill")
-                                Text("Home")
+                                Image(systemName: "drop.circle")
+                                Text("progress")
                             }
                     
                         Plants()
