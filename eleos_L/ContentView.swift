@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     @State private var username = ""
     @State private var password = ""
     @State private var wrongUsername: Float = 0
@@ -65,25 +67,28 @@ struct ContentView: View {
                         
                         
 //?????
-                        Button("Donest have an account ?") {
-                            NavigationLink(destination: SignUpView(), label: {
-                                Text("")
-                                    .hidden()
-                            })
-                            
-                                           }
-                        .padding()
+                    NavigationLink(destination: SignUpView(), label: {
+                        Text("Don't have an account ? ")
+                    })
                     
+                        .padding()
+
                     Button("skip") {
                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/}
-                                            .padding(5)
-                    }
+                               .padding(5)
+                                        }
+
+                                           }
+                    
+                    
                     
                                             
-                }
-            }.navigationBarHidden(true)
+                }.navigationBarHidden(true)
+
+            }
+    
         }
-    }
+    
     
 //    func authenticateUser(username: String, password: String) {
 //        if username.lowercased() == "toka2023" {
@@ -153,27 +158,28 @@ struct SignUpView: View {
                         .background(Color.blue)
                         .cornerRadius(10)
                     
-                    Button("already have an account ?") {
-                        NavigationLink(destination:  ContentView()) {
-                            Text("")
-                                .hidden()
-                        }
-                    }
-                    .padding()
+                    NavigationLink(destination: ContentView(), label: {
+                        Text("Already have an account ? ")
+                    })
                     
+                    .padding()
                     Button("Skip") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                                           /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                                       }
+                                       .padding(5)
                     }
-                    .padding(5)
+                  
+                    
+                   
 
                     
                     
                 }
                 
-            }
-        }.navigationBarHidden(true)
+            }.navigationBarHidden(true)
+        }
     }
-}
+
 
 
 struct ContentView_Previews: PreviewProvider {
