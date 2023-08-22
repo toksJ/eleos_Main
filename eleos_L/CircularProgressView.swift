@@ -29,6 +29,7 @@ struct CircularProgressView: View {
             Image("plant 1")
                 .resizable()
                 .scaledToFit()
+                .offset(x: 25, y: -8)
             
         }
     }
