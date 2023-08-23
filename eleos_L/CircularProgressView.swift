@@ -13,6 +13,7 @@ struct CircularProgressView: View {
     
     
     var body: some View {
+        
         ZStack{
             Circle()
                 .stroke(lineWidth: 20)
@@ -31,6 +32,7 @@ struct CircularProgressView: View {
                 .resizable()
                 .scaledToFit()
                 .offset(x: 25, y: -8)
+            
             
         }
     }

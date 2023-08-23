@@ -39,7 +39,7 @@ struct FinalView: View {
         
       
 
-        }
+        } 
     }
 
 struct FinalView_Previews: PreviewProvider {

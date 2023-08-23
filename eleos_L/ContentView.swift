@@ -190,7 +190,7 @@ struct QuestionMainView: View {
                 Image("startpic")
                     .resizable()
                     .scaledToFit()
-                Text("we are gonnna go on a little journey answer tr uthfully, ready? ")
+                Text("we are gonnna go on a little journey answer truthfully, ready? ")
                     .font(.body)
                     .bold()
                     .padding(15)
