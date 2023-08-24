@@ -52,7 +52,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
                     
-                    NavigationLink(destination: TabsView(), label: {
+                    NavigationLink(destination: QuestionMainView(), label: {
                         Text("Log In ")
                     })
                         
@@ -151,7 +151,7 @@ struct SignUpView: View {
                     
                     
                     
-                    NavigationLink(destination: TabsView(), label: {
+                    NavigationLink(destination: QuestionMainView(), label: {
                         Text("Sign up ")
                     })
                         .foregroundColor(.white)

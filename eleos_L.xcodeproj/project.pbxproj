@@ -11,7 +11,6 @@
 		EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58886B2A93AE1400FF3A5A /* ContentView.swift */; };
 		EC58886E2A93AE1700FF3A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC58886D2A93AE1700FF3A5A /* Assets.xcassets */; };
 		EC5888712A93AE1700FF3A5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5888702A93AE1700FF3A5A /* Preview Assets.xcassets */; };
-		EC58887A2A93BA1F00FF3A5A /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888792A93BA1F00FF3A5A /* signUp.swift */; };
 		EC5888962A94D3D800FF3A5A /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888952A94D3D800FF3A5A /* QuizModel.swift */; };
 		EC5888982A94D40200FF3A5A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888972A94D40200FF3A5A /* QuizView.swift */; };
 		EC58889A2A94D42300FF3A5A /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888992A94D42300FF3A5A /* FinalView.swift */; };
@@ -23,6 +22,10 @@
 		EC5888A62A94DA2900FF3A5A /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888A52A94DA2900FF3A5A /* ToDoList.swift */; };
 		EC5888A82A954EE900FF3A5A /* Plantss.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888A72A954EE900FF3A5A /* Plantss.swift */; };
 		EC5888AC2A95512E00FF3A5A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */; };
+		EC5889002A980E1F00FF3A5A /* HomeSdhedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888FF2A980E1F00FF3A5A /* HomeSdhedule.swift */; };
+		EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889012A980E5E00FF3A5A /* DataValue.swift */; };
+		EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */; };
+		EC5889062A980E9F00FF3A5A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889052A980E9F00FF3A5A /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,6 @@
 		EC58886B2A93AE1400FF3A5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC58886D2A93AE1700FF3A5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC5888702A93AE1700FF3A5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC5888792A93BA1F00FF3A5A /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		EC5888952A94D3D800FF3A5A /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		EC5888972A94D40200FF3A5A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		EC5888992A94D42300FF3A5A /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,10 @@
 		EC5888A52A94DA2900FF3A5A /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		EC5888A72A954EE900FF3A5A /* Plantss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plantss.swift; sourceTree = "<group>"; };
 		EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		EC5888FF2A980E1F00FF3A5A /* HomeSdhedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSdhedule.swift; sourceTree = "<group>"; };
+		EC5889012A980E5E00FF3A5A /* DataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValue.swift; sourceTree = "<group>"; };
+		EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
+		EC5889052A980E9F00FF3A5A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +81,10 @@
 		EC5888682A93AE1400FF3A5A /* eleos_L */ = {
 			isa = PBXGroup;
 			children = (
+				EC5888FE2A980E0C00FF3A5A /* scheule */,
 				EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */,
 				EC58886B2A93AE1400FF3A5A /* ContentView.swift */,
 				EC5888A52A94DA2900FF3A5A /* ToDoList.swift */,
-				EC5888792A93BA1F00FF3A5A /* signUp.swift */,
 				EC5888952A94D3D800FF3A5A /* QuizModel.swift */,
 				EC5888972A94D40200FF3A5A /* QuizView.swift */,
 				EC5888992A94D42300FF3A5A /* FinalView.swift */,
@@ -101,6 +107,17 @@
 				EC5888702A93AE1700FF3A5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC5888FE2A980E0C00FF3A5A /* scheule */ = {
+			isa = PBXGroup;
+			children = (
+				EC5888FF2A980E1F00FF3A5A /* HomeSdhedule.swift */,
+				EC5889012A980E5E00FF3A5A /* DataValue.swift */,
+				EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */,
+				EC5889052A980E9F00FF3A5A /* Task.swift */,
+			);
+			path = scheule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,19 +191,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5888962A94D3D800FF3A5A /* QuizModel.swift in Sources */,
+				EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */,
 				EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */,
 				EC5888A42A94D80800FF3A5A /* Schedule.swift in Sources */,
 				EC5888982A94D40200FF3A5A /* QuizView.swift in Sources */,
 				EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */,
 				EC5888A02A94D7EB00FF3A5A /* Home.swift in Sources */,
 				EC5888A22A94D7FA00FF3A5A /* Plants.swift in Sources */,
+				EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */,
 				EC5888A62A94DA2900FF3A5A /* ToDoList.swift in Sources */,
 				EC58889A2A94D42300FF3A5A /* FinalView.swift in Sources */,
+				EC5889002A980E1F00FF3A5A /* HomeSdhedule.swift in Sources */,
 				EC58886A2A93AE1400FF3A5A /* eleos_LApp.swift in Sources */,
 				EC5888AC2A95512E00FF3A5A /* CircularProgressView.swift in Sources */,
 				EC58889E2A94D7CE00FF3A5A /* TabsView.swift in Sources */,
 				EC5888A82A954EE900FF3A5A /* Plantss.swift in Sources */,
-				EC58887A2A93BA1F00FF3A5A /* signUp.swift in Sources */,
+				EC5889062A980E9F00FF3A5A /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

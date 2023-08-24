@@ -10,54 +10,34 @@ import SwiftUI
 struct CircularProgressView: View {
     
     var progress: CGFloat
-    
-    
+    var score: Int
+    var totalLevels: Int
+
     var body: some View {
         
-        ZStack{
-            Circle()
-                .stroke(lineWidth: 20)
-                .opacity(0.3)
-                .foregroundColor(.blue)
+        VStack {
+            ZStack{
+                Circle()
+                    .stroke(lineWidth: 20)
+                    .opacity(0.3)
+                    .foregroundColor(.blue)
+                
+                
+                
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(style: .init(lineWidth: 20.0,lineCap: .round,lineJoin: .round))
+                    .foregroundColor(.blue)
+                    .rotationEffect(Angle(degrees: 270))
+                
+                Image("monstera")
+                    .resizable()
+                    .scaledToFit()
+                    .offset(x: 25, y: -8)
+
+            }
+            .padding()
             
-            
-            
-            Circle()
-                .trim(from: 0, to: progress)
-                .stroke(style: .init(lineWidth: 20.0,lineCap: .round,lineJoin: .round))
-                .foregroundColor(.blue)
-                .rotationEffect(Angle(degrees: 270))
-            
-            Image("monstera")
-                .resizable()
-                .scaledToFit()
-                .offset(x: 25, y: -8)
-            
-            
-        }
-    }
-    
-    
-}
-
-
-
-
-struct levelView: View {
-
-    var score: Int
-    var totallevels: Int
-
-
-    var body: some View{
-        VStack{
-            CircularProgressView(progress: CGFloat(score) /
-                                 CGFloat(totallevels))
-            .frame(width: 300, height: 300)
-
-
-
-
             HStack(alignment:.center,spacing:2){
                 Spacer(minLength: 0)
 
@@ -100,21 +80,22 @@ struct levelView: View {
 
             }
 
-            Text("\(score)/\(totallevels)")
+            Text("\(score)/\(totalLevels)")
                 .font(.system(size:25))
                 .bold()
                 .padding()
-            
 
         }
+        
+        
     }
+    
+    
 }
 
-
-
-struct levelView_Previews: PreviewProvider {
+struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        levelView(score: 2, totallevels: 5)
+        CircularProgressView(progress: 0.5, score: 1, totalLevels: 5)
     }
 }
 
