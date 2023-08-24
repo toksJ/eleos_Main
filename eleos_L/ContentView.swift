@@ -153,7 +153,7 @@ struct SignUpView: View {
                     
                     NavigationLink(destination: QuestionMainView(), label: {
                         Text("Sign up ")
-                    })
+                     })
                         .foregroundColor(.white)
                         .frame(width: 300, height: 50)
                         .background(Color.blue)

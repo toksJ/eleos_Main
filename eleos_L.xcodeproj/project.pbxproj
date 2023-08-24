@@ -81,20 +81,17 @@
 		EC5888682A93AE1400FF3A5A /* eleos_L */ = {
 			isa = PBXGroup;
 			children = (
+				EC5889072A9810A300FF3A5A /* question view */,
 				EC5888FE2A980E0C00FF3A5A /* scheule */,
 				EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */,
 				EC58886B2A93AE1400FF3A5A /* ContentView.swift */,
 				EC5888A52A94DA2900FF3A5A /* ToDoList.swift */,
-				EC5888952A94D3D800FF3A5A /* QuizModel.swift */,
-				EC5888972A94D40200FF3A5A /* QuizView.swift */,
-				EC5888992A94D42300FF3A5A /* FinalView.swift */,
 				EC58889D2A94D7CE00FF3A5A /* TabsView.swift */,
 				EC5888A32A94D80800FF3A5A /* Schedule.swift */,
 				EC5888A12A94D7FA00FF3A5A /* Plants.swift */,
 				EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */,
 				EC5888A72A954EE900FF3A5A /* Plantss.swift */,
 				EC58889F2A94D7EB00FF3A5A /* Home.swift */,
-				EC58889B2A94D44B00FF3A5A /* eleos_questionApp.swift */,
 				EC58886D2A93AE1700FF3A5A /* Assets.xcassets */,
 				EC58886F2A93AE1700FF3A5A /* Preview Content */,
 			);
@@ -118,6 +115,17 @@
 				EC5889052A980E9F00FF3A5A /* Task.swift */,
 			);
 			path = scheule;
+			sourceTree = "<group>";
+		};
+		EC5889072A9810A300FF3A5A /* question view */ = {
+			isa = PBXGroup;
+			children = (
+				EC5888952A94D3D800FF3A5A /* QuizModel.swift */,
+				EC58889B2A94D44B00FF3A5A /* eleos_questionApp.swift */,
+				EC5888972A94D40200FF3A5A /* QuizView.swift */,
+				EC5888992A94D42300FF3A5A /* FinalView.swift */,
+			);
+			path = "question view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
