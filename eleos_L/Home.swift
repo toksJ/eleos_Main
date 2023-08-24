@@ -15,6 +15,18 @@ struct Home: View {
     
     var body: some View {
         ZStack{
+            VStack {
+                Text("eleos")
+                    .italic()
+                    .bold()
+                    .font(.system(size: 30))
+                    .offset(x: -120, y:-315)
+                Text("Get Things Done")
+                    .italic()
+                    .offset(x: -93, y:-315)
+                    .padding(-10)
+
+            }
             Button {
                 buttonSheet.toggle()
             } label: {

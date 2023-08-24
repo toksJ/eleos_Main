@@ -25,6 +25,7 @@
 		EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889012A980E5E00FF3A5A /* DataValue.swift */; };
 		EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */; };
 		EC5889062A980E9F00FF3A5A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889052A980E9F00FF3A5A /* Task.swift */; };
+		EC5889102A981B0A00FF3A5A /* PlayfairDisplay-Regular in Resources */ = {isa = PBXBuildFile; fileRef = EC58890F2A981B0A00FF3A5A /* PlayfairDisplay-Regular */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		EC5889012A980E5E00FF3A5A /* DataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValue.swift; sourceTree = "<group>"; };
 		EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		EC5889052A980E9F00FF3A5A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EC58890F2A981B0A00FF3A5A /* PlayfairDisplay-Regular */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "PlayfairDisplay-Regular"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		EC58886F2A93AE1700FF3A5A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				EC58890F2A981B0A00FF3A5A /* PlayfairDisplay-Regular */,
 				EC5888702A93AE1700FF3A5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -185,6 +188,7 @@
 			files = (
 				EC5888712A93AE1700FF3A5A /* Preview Assets.xcassets in Resources */,
 				EC58886E2A93AE1700FF3A5A /* Assets.xcassets in Resources */,
+				EC5889102A981B0A00FF3A5A /* PlayfairDisplay-Regular in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
