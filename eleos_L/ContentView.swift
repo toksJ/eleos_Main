@@ -16,7 +16,6 @@ struct ContentView: View {
     @State private var wrongPassword: Float  = 0
 //    @State private var showingLoginScreen = false
     
-    
     var body: some View {
         NavigationView {
             ZStack {
