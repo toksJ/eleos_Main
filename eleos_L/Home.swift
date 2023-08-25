@@ -11,7 +11,6 @@ struct Home: View {
     
     @State var buttonSheet = false
     @State var AccountSheet = false
-    @State private var isToggled = false
 
     
     var body: some View {
@@ -70,7 +69,8 @@ struct Home: View {
     
     struct BottomSheetView: View {
         @State private var wakeUp = Date.now
-        
+        @State private var isToggled = false
+
         
         var body: some View {
             NavigationView {
@@ -87,15 +87,12 @@ struct Home: View {
                             
                             Section("General") {
                                 
-                                NavigationLink(destination: NotificationView(), label: {
-                                    Text("Notification")
-
-
-                                })
-//                                Toggle(isOn: $isToggled
-//                                ) {
+//                                NavigationLink(destination: NotificationView(), label: {
 //                                    Text("Notification")
-//                                }
+//
+//
+//                                })
+                                Toggle("Notification", isOn: $isToggled)
 
                                 
                                 NavigationLink(destination: ApperanceView(), label: {
