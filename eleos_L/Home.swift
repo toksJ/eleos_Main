@@ -11,7 +11,8 @@ struct Home: View {
     
     @State var buttonSheet = false
     @State var AccountSheet = false
-    
+    @State private var isToggled = false
+
     
     var body: some View {
         ZStack{
@@ -85,11 +86,17 @@ struct Home: View {
                             
                             
                             Section("General") {
+                                
                                 NavigationLink(destination: NotificationView(), label: {
                                     Text("Notification")
-                                    
-                                    
+
+
                                 })
+//                                Toggle(isOn: $isToggled
+//                                ) {
+//                                    Text("Notification")
+//                                }
+
                                 
                                 NavigationLink(destination: ApperanceView(), label: {
                                     Text("Apperance")
@@ -108,27 +115,32 @@ struct Home: View {
                                 })
                             }
                             
-                            Section("About eleos"){
+                            Section("About The App"){
                                 
-                                
-                                NavigationLink(destination: QuestionsView(), label: {
-                                    Text("Questions")
-                                    Image(systemName: "questionmark.folder.fill").offset(x: 175)
+                                NavigationLink(destination: AboutEleosView(), label: {
+                                    Text("About Eleos")
+                                    Image(systemName: "apps.iphone").offset(x: 175)
 
                                 })
-                                NavigationLink(destination: ToDoListView(), label: {
-                                    Text("To-Do List")
-                                    Image(systemName: "list.bullet.clipboard.fill").offset(x: 175)
-
-                                })
-                                NavigationLink(destination: DropsView(), label: {
-                                    Text("Drops")
-                                    Image(systemName: "pipe.and.drop.fill").offset(x: 205)
-                                })
-                                NavigationLink(destination: PlantsView(), label: {
-                                    Text("Plants")
-                                    Image(systemName: "arrow.up.bin.fill").offset(x: 205)
-                                })
+                                
+//                                NavigationLink(destination: QuestionsView(), label: {
+//                                    Text("Questions")
+//                                    Image(systemName: "questionmark.folder.fill").offset(x: 175)
+//
+//                                })
+//                                NavigationLink(destination: ToDoListView(), label: {
+//                                    Text("To-Do List")
+//                                    Image(systemName: "list.bullet.clipboard.fill").offset(x: 175)
+//
+//                                })
+//                                NavigationLink(destination: DropsView(), label: {
+//                                    Text("Drops")
+//                                    Image(systemName: "pipe.and.drop.fill").offset(x: 205)
+//                                })
+//                                NavigationLink(destination: PlantsView(), label: {
+//                                    Text("Plants")
+//                                    Image(systemName: "arrow.up.bin.fill").offset(x: 205)
+//                                })
                             }
                             
                             Section("More"){
@@ -193,7 +205,7 @@ struct Home: View {
             }
             
         }
-                  
+                
     }
     
     
@@ -225,6 +237,8 @@ struct Home: View {
     struct ApperanceView: View {
         @State private var FontSize = 0
         @State private var iconSize = 0.0
+        @State private var bgColor =
+                Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
 
         var body: some View {
             Form {
@@ -234,6 +248,11 @@ struct Home: View {
                 }
                 Text("the current icon size is ^[\(Int(iconSize)) icons avilable](inflect: true)")
                 Slider(value: $iconSize, in: 0...10)
+                
+                VStack {
+                            ColorPicker("Alignment Guides", selection: $bgColor)
+                        }
+                    }
                 
             }
             
@@ -280,12 +299,28 @@ struct Home: View {
     
     
     
-    struct QuestionsView: View {
+//    struct QuestionsView: View {
+//        var body: some View {
+//            Form {
+//                Section("Questions") {
+//
+//                    Text("The questions only show up when ur a new member of the app! We evaluated ur self tolerance level based on ur answers to the questions that you wer asked.")
+//
+//
+//                }
+//                .multilineTextAlignment(.leading)
+//
+//            }
+//
+//        }
+//    }
+//
+    struct AboutEleosView: View {
         var body: some View {
             Form {
-                Section("Questions") {
+                Section("Eleos") {
                     
-                    Text("The questions only show up when ur a new member of the app! We evaluated ur self tolerance level based on ur answers to the questions that you wer asked.")
+                    Text("all about eleos")
                     
                     
                 }
@@ -295,47 +330,50 @@ struct Home: View {
             
         }
     }
-    struct ToDoListView: View {
-        var body: some View {
-            Form {
-                Section("To-Do List") {
-                    
-                    Text("The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.")
-                    
-                }
-                .multilineTextAlignment(.leading)
-                
-            }
-            
-        }
-    }
-    struct DropsView: View {
-        var body: some View {
-            Form {
-                Section("Drops") {
-                    
-                    Text("Drops are a form of reward points u receive each time u cross of a certain amount of ur to dos. Drops will help u unlock certain plants and allow u to make these plants grow.")
-                    
-                }
-                .multilineTextAlignment(.leading)
-                
-            }
-            
-        }
-    }
-    struct PlantsView: View {
-        var body: some View {
-            Form {
-                Section("Plants") {
-                    
-                    Text("The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive! ")
-                    
-                }
-                .multilineTextAlignment(.leading)
-            }
-            
-        }
-    }
+    
+    
+//
+//    struct ToDoListView: View {
+//        var body: some View {
+//            Form {
+//                Section("To-Do List") {
+//
+//                    Text("The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.")
+//
+//                }
+//                .multilineTextAlignment(.leading)
+//
+//            }
+//
+//        }
+//    }
+//    struct DropsView: View {
+//        var body: some View {
+//            Form {
+//                Section("Drops") {
+//
+//                    Text("Drops are a form of reward points u receive each time u cross of a certain amount of ur to dos. Drops will help u unlock certain plants and allow u to make these plants grow.")
+//
+//                }
+//                .multilineTextAlignment(.leading)
+//
+//            }
+//
+//        }
+//    }
+//    struct PlantsView: View {
+//        var body: some View {
+//            Form {
+//                Section("Plants") {
+//
+//                    Text("The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive! ")
+//
+//                }
+//                .multilineTextAlignment(.leading)
+//            }
+//
+//        }
+//    }
     struct CreatorsView: View {
         var body: some View {
             Form {
@@ -362,4 +400,4 @@ struct Home: View {
             Home()
         }
     }
-}
+
