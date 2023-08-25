@@ -163,27 +163,37 @@ struct Home: View {
         
     }
     struct NotificationView: View {
-        @State private var isToggled = false
+        @State private var isToggled1 = false
+        @State private var isToggled2 = false
+        @State private var isToggled3 = false
+
+
         
         var body: some View {
             Form {
                 
-                Toggle("Mute ", isOn: $isToggled)
+                Toggle("Mute until unmuted", isOn: $isToggled1)
                 
-                if isToggled {
+                if isToggled1 {
                     Text("Muted")
+                        .font(.system(size: 12, weight: .light, design: .default))
+                }
+                Toggle("Mute for a day", isOn: $isToggled2)
+                
+                if isToggled2 {
+                    Text("Muted for a day")
+                        .font(.system(size: 12, weight: .light, design: .default))
+                }
+                Toggle("Mute for an hour", isOn: $isToggled3)
+                
+                if isToggled3 {
+                    Text("Muted for an hour")
                         .font(.system(size: 12, weight: .light, design: .default))
                 }
             }
             
         }
-        
-        
-        
-        
-        
-        
-        
+                  
     }
     
     
