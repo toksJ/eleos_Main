@@ -15,4 +15,5 @@ struct Plant: Identifiable {
     var plantFullPic : String
     var plantHeadline: String
     var plantDescription : String
+    var dropsNeeded : Int
 }
