@@ -21,6 +21,7 @@ struct PlantListView: View {
                     }// navigation link
                 }// list
                 .navigationTitle("Plants")
+                .foregroundColor(Color("font"))
             }
         }
     }

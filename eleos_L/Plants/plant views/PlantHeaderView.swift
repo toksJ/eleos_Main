@@ -15,7 +15,10 @@ struct PlantHeaderView: View {
     
     var body: some View {
         ZStack{
-            Color("purple")
+            Image("bg 1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 400, height: 400)
             Image(plant.plantFullPic)
                 .resizable()
                 .scaledToFit()

@@ -24,9 +24,16 @@ struct PlantDetailView: View {
                         .multilineTextAlignment(.leading)
                         .padding()
                     // description
-                    Text(plant.plantDescription)
-                        .padding()
+                    VStack(alignment:.leading, spacing: 0){
+                        Text("Description")
+                            .padding(.horizontal)
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(Color("font"))
+                        Text(plant.plantDescription)
+                        .padding()}
                     
+                      
                 }
             }// vstack
             .navigationBarTitle(plant.plantName,displayMode: .inline)

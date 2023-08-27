@@ -22,10 +22,12 @@ struct PlantRowView: View {
                 Text(plant.plantName)
                     .font(.title2)
                     .bold()
+                    
                 
                 Text(plant.plantHeadline)
                     .font(.callout)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color("font"))
+                    .opacity(0.7)
                 
                 
             }
