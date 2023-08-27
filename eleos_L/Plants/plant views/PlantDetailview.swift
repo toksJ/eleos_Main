@@ -30,7 +30,7 @@ struct PlantDetailView: View {
                             .frame(width:100)
                         Spacer()
                         
-                            
+                        
                     }
                     
                     
@@ -42,9 +42,29 @@ struct PlantDetailView: View {
                             .bold()
                             .foregroundColor(Color("font"))
                         Text(plant.plantDescription)
-                        .padding()}
+                            .padding()
+                        Spacer()
+                        // actions
+                        HStack{
+                            Spacer()
+                            Button{
+                                print("no longer thirsty plant")
+                                
+                            }label: {
+                                Text("water the plant!")
+                            }
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color("Purple"))
+                            .cornerRadius(10)
+                           Spacer()
+                        }
                     
-                      
+                        
+                        
+                    }// vstack
+                    
+                    
                 }
             }// vstack
             .navigationBarTitle(plant.plantName,displayMode: .inline)
@@ -52,8 +72,8 @@ struct PlantDetailView: View {
             .edgesIgnoringSafeArea(.top)
         }// nav view
     }
+    
 }
-
 struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetailView(plant: plantsData[0])
