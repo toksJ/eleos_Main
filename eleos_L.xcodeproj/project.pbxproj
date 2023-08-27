@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4C65C552A9B2CD90019383C /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C542A9B2CD90019383C /* PlantListView.swift */; };
+		C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */; };
+		C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C582A9B2D150019383C /* PlantRowView.swift */; };
+		C4C65C5B2A9B2D360019383C /* PlantDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */; };
+		C4C65C5E2A9B2D810019383C /* Plant Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5D2A9B2D810019383C /* Plant Struct.swift */; };
+		C4C65C602A9B2D950019383C /* PlantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5F2A9B2D950019383C /* PlantData.swift */; };
 		EC58886A2A93AE1400FF3A5A /* eleos_LApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */; };
 		EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58886B2A93AE1400FF3A5A /* ContentView.swift */; };
 		EC58886E2A93AE1700FF3A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC58886D2A93AE1700FF3A5A /* Assets.xcassets */; };
@@ -17,9 +23,7 @@
 		EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58889B2A94D44B00FF3A5A /* eleos_questionApp.swift */; };
 		EC58889E2A94D7CE00FF3A5A /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58889D2A94D7CE00FF3A5A /* TabsView.swift */; };
 		EC5888A02A94D7EB00FF3A5A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58889F2A94D7EB00FF3A5A /* Home.swift */; };
-		EC5888A22A94D7FA00FF3A5A /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888A12A94D7FA00FF3A5A /* Plants.swift */; };
 		EC5888A42A94D80800FF3A5A /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888A32A94D80800FF3A5A /* Schedule.swift */; };
-		EC5888A82A954EE900FF3A5A /* Plantss.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888A72A954EE900FF3A5A /* Plantss.swift */; };
 		EC5888AC2A95512E00FF3A5A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */; };
 		EC5889002A980E1F00FF3A5A /* HomeSdhedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888FF2A980E1F00FF3A5A /* HomeSdhedule.swift */; };
 		EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889012A980E5E00FF3A5A /* DataValue.swift */; };
@@ -29,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4C65C542A9B2CD90019383C /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
+		C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantHeaderView.swift; sourceTree = "<group>"; };
+		C4C65C582A9B2D150019383C /* PlantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRowView.swift; sourceTree = "<group>"; };
+		C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailview.swift; sourceTree = "<group>"; };
+		C4C65C5D2A9B2D810019383C /* Plant Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant Struct.swift"; sourceTree = "<group>"; };
+		C4C65C5F2A9B2D950019383C /* PlantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantData.swift; sourceTree = "<group>"; };
 		EC5888662A93AE1400FF3A5A /* eleos_L.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eleos_L.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eleos_LApp.swift; sourceTree = "<group>"; };
 		EC58886B2A93AE1400FF3A5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,9 +50,7 @@
 		EC58889B2A94D44B00FF3A5A /* eleos_questionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eleos_questionApp.swift; sourceTree = "<group>"; };
 		EC58889D2A94D7CE00FF3A5A /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		EC58889F2A94D7EB00FF3A5A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		EC5888A12A94D7FA00FF3A5A /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
 		EC5888A32A94D80800FF3A5A /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		EC5888A72A954EE900FF3A5A /* Plantss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plantss.swift; sourceTree = "<group>"; };
 		EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		EC5888FF2A980E1F00FF3A5A /* HomeSdhedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSdhedule.swift; sourceTree = "<group>"; };
 		EC5889012A980E5E00FF3A5A /* DataValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValue.swift; sourceTree = "<group>"; };
@@ -62,6 +70,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4C65C522A9B2C8B0019383C /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				C4C65C5C2A9B2D480019383C /* plant data */,
+				C4C65C532A9B2C9F0019383C /* plant views */,
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		C4C65C532A9B2C9F0019383C /* plant views */ = {
+			isa = PBXGroup;
+			children = (
+				C4C65C542A9B2CD90019383C /* PlantListView.swift */,
+				C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */,
+				C4C65C582A9B2D150019383C /* PlantRowView.swift */,
+				C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */,
+			);
+			path = "plant views";
+			sourceTree = "<group>";
+		};
+		C4C65C5C2A9B2D480019383C /* plant data */ = {
+			isa = PBXGroup;
+			children = (
+				C4C65C5D2A9B2D810019383C /* Plant Struct.swift */,
+				C4C65C5F2A9B2D950019383C /* PlantData.swift */,
+			);
+			path = "plant data";
+			sourceTree = "<group>";
+		};
 		EC58885D2A93AE1400FF3A5A = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +123,9 @@
 				EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */,
 				EC58886B2A93AE1400FF3A5A /* ContentView.swift */,
 				EC58889D2A94D7CE00FF3A5A /* TabsView.swift */,
+				C4C65C522A9B2C8B0019383C /* Plants */,
 				EC5888A32A94D80800FF3A5A /* Schedule.swift */,
-				EC5888A12A94D7FA00FF3A5A /* Plants.swift */,
 				EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */,
-				EC5888A72A954EE900FF3A5A /* Plantss.swift */,
 				EC58889F2A94D7EB00FF3A5A /* Home.swift */,
 				EC58886D2A93AE1700FF3A5A /* Assets.xcassets */,
 				EC58886F2A93AE1700FF3A5A /* Preview Content */,
@@ -200,20 +236,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5888962A94D3D800FF3A5A /* QuizModel.swift in Sources */,
+				C4C65C5B2A9B2D360019383C /* PlantDetailview.swift in Sources */,
 				EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */,
 				EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */,
 				EC5888A42A94D80800FF3A5A /* Schedule.swift in Sources */,
 				EC5888982A94D40200FF3A5A /* QuizView.swift in Sources */,
+				C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */,
+				C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */,
 				EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */,
 				EC5888A02A94D7EB00FF3A5A /* Home.swift in Sources */,
-				EC5888A22A94D7FA00FF3A5A /* Plants.swift in Sources */,
+				C4C65C5E2A9B2D810019383C /* Plant Struct.swift in Sources */,
 				EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */,
 				EC58889A2A94D42300FF3A5A /* FinalView.swift in Sources */,
+				C4C65C552A9B2CD90019383C /* PlantListView.swift in Sources */,
 				EC5889002A980E1F00FF3A5A /* HomeSdhedule.swift in Sources */,
 				EC58886A2A93AE1400FF3A5A /* eleos_LApp.swift in Sources */,
 				EC5888AC2A95512E00FF3A5A /* CircularProgressView.swift in Sources */,
 				EC58889E2A94D7CE00FF3A5A /* TabsView.swift in Sources */,
-				EC5888A82A954EE900FF3A5A /* Plantss.swift in Sources */,
+				C4C65C602A9B2D950019383C /* PlantData.swift in Sources */,
 				EC5889062A980E9F00FF3A5A /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ struct TabsView: View {
                                 Text("progress")
                             }
                     
-                        Plants()
+                        PlantListView()
                             .tabItem {
                                 Image(systemName: "leaf.fill")
                                 Text("Plants")
