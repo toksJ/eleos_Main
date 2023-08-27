@@ -17,12 +17,23 @@ struct PlantDetailView: View {
                     // header
                     PlantHeaderView(plant: plant)
                     //title
-                    Text(plant.plantName)
-                        .font(.largeTitle)
-                        .bold()
-                        .fontWeight(.heavy)
-                        .multilineTextAlignment(.leading)
-                        .padding()
+                    
+                    HStack(alignment: .center, spacing: 30){
+                        Text(plant.plantName)
+                            .font(.largeTitle)
+                            .bold()
+                            .fontWeight(.heavy)
+                            .multilineTextAlignment(.leading)
+                            .padding()
+                        Spacer(minLength: 0.1)
+                        DropsRequiredView(plant: plantsData[0])
+                            .frame(width:100)
+                        Spacer()
+                        
+                            
+                    }
+                    
+                    
                     // description
                     VStack(alignment:.leading, spacing: 0){
                         Text("Description")

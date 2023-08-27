@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct DropsRequiredView: View {
-    var plants: Plant
+    var plant: Plant
     var body: some View {
         ZStack{
             Rectangle()
-                .frame(width: 170,height: 75)
+                .frame(width: 140,height: 45)
                 .cornerRadius(10)
                 .foregroundColor(Color("bg"))
                 
             HStack(alignment: .center, spacing:0){
-                ForEach(0..<plants.dropsNeeded, id: \.self) { index in
+                ForEach(0..<plant.dropsNeeded, id: \.self) { index in
                     Image("drop2")
                         .resizable()
-                    .frame(width: 30, height: 30)}
+                    .frame(width: 20, height: 20)}
             }
         }
     }
 }
 struct DropsRequiredView_Previews: PreviewProvider {
     static var previews: some View {
-        DropsRequiredView(plants: plantsData[0])
+        DropsRequiredView(plant: plantsData[3])
     }
 }
