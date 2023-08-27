@@ -17,7 +17,7 @@ struct DropsRequiredView: View {
                 .foregroundColor(Color("bg"))
                 
             HStack(alignment: .center, spacing:0){
-                ForEach(0..<plant.dropsNeeded, id: \.self) { index in
+                ForEach(0..<plant.dropsNeeded) { index in
                     Image("drop2")
                         .resizable()
                     .frame(width: 20, height: 20)}
@@ -27,6 +27,6 @@ struct DropsRequiredView: View {
 }
 struct DropsRequiredView_Previews: PreviewProvider {
     static var previews: some View {
-        DropsRequiredView(plant: plantsData[3])
+        DropsRequiredView(plant: plantsData[0])
     }
 }

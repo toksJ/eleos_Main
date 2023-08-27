@@ -26,7 +26,7 @@ struct PlantDetailView: View {
                             .multilineTextAlignment(.leading)
                             .padding()
                         Spacer(minLength: 0.1)
-                        DropsRequiredView(plant: plantsData[0])
+                        DropsRequiredView(plant: plant)
                             .frame(width:100)
                         Spacer()
                         
