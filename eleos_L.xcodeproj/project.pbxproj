@@ -13,6 +13,7 @@
 		C4C65C5B2A9B2D360019383C /* PlantDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */; };
 		C4C65C5E2A9B2D810019383C /* Plant Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5D2A9B2D810019383C /* Plant Struct.swift */; };
 		C4C65C602A9B2D950019383C /* PlantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C5F2A9B2D950019383C /* PlantData.swift */; };
+		C4C65C842A9B75370019383C /* DropsRequiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C832A9B75370019383C /* DropsRequiredView.swift */; };
 		EC58886A2A93AE1400FF3A5A /* eleos_LApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */; };
 		EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58886B2A93AE1400FF3A5A /* ContentView.swift */; };
 		EC58886E2A93AE1700FF3A5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC58886D2A93AE1700FF3A5A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailview.swift; sourceTree = "<group>"; };
 		C4C65C5D2A9B2D810019383C /* Plant Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant Struct.swift"; sourceTree = "<group>"; };
 		C4C65C5F2A9B2D950019383C /* PlantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantData.swift; sourceTree = "<group>"; };
+		C4C65C832A9B75370019383C /* DropsRequiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropsRequiredView.swift; sourceTree = "<group>"; };
 		EC5888662A93AE1400FF3A5A /* eleos_L.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eleos_L.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5888692A93AE1400FF3A5A /* eleos_LApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eleos_LApp.swift; sourceTree = "<group>"; };
 		EC58886B2A93AE1400FF3A5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */,
 				C4C65C582A9B2D150019383C /* PlantRowView.swift */,
 				C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */,
+				C4C65C832A9B75370019383C /* DropsRequiredView.swift */,
 			);
 			path = "plant views";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */,
 				C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */,
 				EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */,
+				C4C65C842A9B75370019383C /* DropsRequiredView.swift in Sources */,
 				EC5888A02A94D7EB00FF3A5A /* Home.swift in Sources */,
 				C4C65C5E2A9B2D810019383C /* Plant Struct.swift in Sources */,
 				EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */,
