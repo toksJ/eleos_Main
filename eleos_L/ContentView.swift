@@ -182,8 +182,20 @@ struct SignUpView: View {
 
 struct QuestionMainView: View {
     @State var score = 0
+    @AppStorage("finishedQuestions") private var getFinishedQuestions = false
+    @State private var finishedQuestions = UserDefaults.standard.bool(forKey: "finishedQuestions")
     
     var body: some View {
+        
+        if getFinishedQuestions {
+            TabsView()
+        }
+        else {
+            content
+        }
+    }
+    
+    var content: some View {
         NavigationView{
             VStack(spacing: 20){
                 Image("startpic")

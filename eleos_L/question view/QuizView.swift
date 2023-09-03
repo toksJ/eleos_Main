@@ -29,16 +29,13 @@ struct Quiz1 : View {
     @State var score = 0
     @State private var showActionSheet = false
     
-    @AppStorage("finishedQuestions") private var getFinishedQuestions = false
-    @State private var finishedQuestions = UserDefaults.standard.bool(forKey: "finishedQuestions")
+    
     
         
     func didTapOption() {
         if questionNumber == (myQuiz1.count - 1) {
             print("last question")
             UserDefaults.standard.set(true, forKey: "finishedQuestions")
-            print(finishedQuestions)
-            print(getFinishedQuestions)
             showView = true
         } else {
             questionNumber += 1
@@ -47,17 +44,6 @@ struct Quiz1 : View {
     }
     
     var body: some View {
-      
-        if getFinishedQuestions {
-            TabsView()
-        }
-        else {
-            content
-        }
- 
-    }
-    
-    var content: some View {
         NavigationStack {
             VStack(spacing: 15){
                 
