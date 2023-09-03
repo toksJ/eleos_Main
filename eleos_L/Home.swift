@@ -65,6 +65,7 @@ struct Home: View {
             }
             
         }
+        .navigationBarHidden(true)
     }
     
     struct BottomSheetView: View {
