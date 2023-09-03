@@ -36,6 +36,7 @@ struct FinalView: View {
             .cornerRadius(10)
             
             }
+        .navigationBarHidden(true)
         
       
 
