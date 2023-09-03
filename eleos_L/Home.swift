@@ -15,54 +15,56 @@ struct Home: View {
     
     var body: some View {
         ZStack{
-            VStack {
-                Text("eleos")
-                    .italic()
-                    .bold()
-                    .font(.system(size: 30))
-                    .offset(x: -120, y:-315)
+            VStack(alignment: .leading){
+                HStack {
+                    Text("eleos")
+                        .italic()
+                        .bold()
+                        .font(.system(size: 30))
+                        
+                    Spacer()
+                    
+                    Button {
+                        AccountSheet.toggle()
+                    } label: {
+                        Image(systemName: "person.crop.circle")
+                            .font(.system(size: 30))
+                            .foregroundColor(.black)
+                            .frame(width: 50, height: 50)
+                            .sheet(isPresented: $AccountSheet) {
+                                AccountSheetView()
+                                    .presentationDetents([.height(730)])
+                            }
+                        
+                    }
+                    
+                    Button {
+                        buttonSheet.toggle()
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .font(.system(size: 30))
+                            .foregroundColor(.black)
+                            .frame(width: 50, height: 50)
+                            .sheet(isPresented: $buttonSheet) {
+                                BottomSheetView()
+                                    .presentationDetents([.height(730)])
+                            }
+                        
+                    }
+                    .padding(.trailing, 10)
+                    
+   
+                }
+                
                 Text("Get Things Done")
                     .italic()
-                    .offset(x: -93, y:-315)
                     .padding(-10)
+                Spacer()
 
             }
-            Button {
-                buttonSheet.toggle()
-            } label: {
-                Image(systemName: "gearshape")
-                    .font(.title)
-                    .font(.body.bold())
-                    .foregroundColor(.black)
-                    .padding(20)
-                    .frame(maxWidth: . infinity, maxHeight: .infinity, alignment: .topTrailing)
-                    .padding(20)
-                    .offset(x: 10)
-                
-                    .sheet(isPresented: $buttonSheet) {
-                        BottomSheetView()
-                            .presentationDetents([.height(730)])
-                    }
-                
-            }
+            .padding(.leading, 20)
             
-            Button {
-                AccountSheet.toggle()
-            } label: {
-                Image(systemName: "person.crop.circle")
-                    .font(.title)
-                    .font(.body.bold())
-                    .foregroundColor(.black)
-                    .padding(20)
-                    .frame(width: 280, height: 730, alignment: .topTrailing)
-                    .padding(20)
-                    .offset(x:-10)
-                    .sheet(isPresented: $AccountSheet) {
-                        AccountSheetView()
-                            .presentationDetents([.height(730)])
-                    }
-                
-            }
+            
             
         }
         .navigationBarHidden(true)
@@ -145,6 +147,19 @@ struct Home: View {
                                 NavigationLink(destination: CreatorsView(), label: {
                                     Text("About us")
                                     Image(systemName: "person.2.fill").offset(x: 175)
+
+
+                                })
+                            }
+                            
+                            Section("Logout"){
+                                NavigationLink(destination: ContentView(), label: {
+                                    HStack {
+                                        Image(systemName: "person.2.fill")
+                                        Text("Sign Out")
+                                    }
+                                    
+                                    
 
 
                                 })
