@@ -20,7 +20,7 @@ struct PlantListView: View {
                         PlantRowView(plant: plant)
                     }// navigation link
                 }// list
-                .navigationTitle("Plants")
+                .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
                
             }
         }

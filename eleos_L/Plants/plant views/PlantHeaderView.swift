@@ -10,12 +10,14 @@ import SwiftUI
 struct PlantHeaderView: View {
     
     var plant : Plant
+    @Environment(\.colorScheme) var colorScheme
+
     
     @State private var PlantAnimation = false
     
     var body: some View {
         ZStack{
-            Image("bg 1")
+            Image(colorScheme == .dark ? "bg 2":"bg 1")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 400, height: 400)
