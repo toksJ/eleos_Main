@@ -8,13 +8,41 @@
 import SwiftUI
 
 struct CounterView: View {
+    
+    @ObservedObject var todoManager: TodoManager
+    
+    @State private var dropsCount: Int = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Rectangle()
+                .frame(width: 80,height: 50)
+                .foregroundColor(Color("bg"))
+                .cornerRadius(6)
+            
+            HStack{
+                Image("drops")
+                    .resizable()
+                    .frame(width: 40,height: 40)
+                Text("\(dropsCount)")
+                    .offset(x:-5)
+                    .onAppear(){
+                        for todo in todoManager.todos {
+                            if todo.isCompleted{
+                                dropsCount+=1
+                            }
+                        }
+                        
+                    }
+            }
+        
+        }
+        
     }
 }
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView()
+        CounterView(todoManager: TodoManager())
     }
 }
