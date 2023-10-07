@@ -15,6 +15,7 @@ struct Todo: Identifiable, Codable {
     var selectedDate : Date?
     var selectedTime : Date?
     var priortise = false
+    var giveDrop = false
     var isOverdue: Bool {
         if let selectedTime = selectedTime {
             let calendar = Calendar.current

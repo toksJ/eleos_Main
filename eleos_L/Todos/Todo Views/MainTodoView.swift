@@ -22,14 +22,22 @@ struct MainTodoListView: View {
                 }label: {
                     HStack {
                         Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
+                            .opacity(todo.isCompleted ? 0.5 : 1)
                             .onTapGesture {
-                                todo.isCompleted.toggle()
+                                    todo.giveDrop = true
+                                    todo.isCompleted=true
                             }
-                        Text(todo.priortise ? "‼️" : "")
+                            .onAppear{
+                                todo.giveDrop=false
+                            }
+                                                Text(todo.priortise ? "‼️" : "")
+                            .opacity(todo.isCompleted ? 0.5 : 1)
                         VStack(alignment: .leading ){
                             HStack{
                                 Text(todo.title)
                                     .strikethrough( todo.isCompleted )
+//                                    .foregroundColor(todo.isCompleted ? .gray : .black)
+                                    .opacity(todo.isCompleted ? 0.5 : 1)
                                 .foregroundColor(todo.isOverdue ? .red : .primary)
                                 
                                 Text(todo.isOverdue ? "Overdue" : "")
