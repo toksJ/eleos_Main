@@ -17,7 +17,7 @@ struct Home: View {
         ZStack{
             VStack(alignment: .leading){
                 HStack {
-                    
+                   
                         
                     Spacer()
                     
@@ -84,7 +84,6 @@ struct Home: View {
                             
                             
                             Section("General") {
-                                
 
                                 Toggle("Notification", isOn: $isToggled)
 
@@ -268,9 +267,13 @@ struct Home: View {
                 }
             }
         }
-        
- 
- 
+
+    }
+    
+    
+    
+    
+
     struct AboutEleosView: View {
         var body: some View {
             Form {
@@ -287,6 +290,8 @@ struct Home: View {
         }
     }
     
+    
+
 
     struct CreatorsView: View {
         var body: some View {
