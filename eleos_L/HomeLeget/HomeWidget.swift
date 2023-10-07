@@ -23,7 +23,7 @@ struct HomeWidget: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("more drops more life")
                             .font(.footnote)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.white)
                         
                         
                         Text(forecast.location)

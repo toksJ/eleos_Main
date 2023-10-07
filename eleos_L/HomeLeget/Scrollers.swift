@@ -27,7 +27,7 @@ struct Scrolleres: View {
             }
         }
         .overlay {
-            EloesHome()
+            Home()
         }
         .navigationBarHidden(true)
     }

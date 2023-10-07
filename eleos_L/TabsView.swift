@@ -12,7 +12,7 @@ struct TabsView: View {
     var body: some View {
         
         TabView {
-            Home()
+            Scrolleres()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")

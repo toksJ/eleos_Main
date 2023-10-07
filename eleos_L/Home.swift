@@ -16,9 +16,10 @@ struct Home: View {
     var body: some View {
         ZStack{
             VStack(alignment: .leading){
-                HStack {
-                   
-                        
+                HStack(spacing: 5) {
+                        Text("Eleos ✨")
+                            .font(.title)
+                            .foregroundColor(.white)
                     Spacer()
                     
                     Button {
@@ -26,7 +27,7 @@ struct Home: View {
                     } label: {
                         Image(systemName: "person.crop.circle")
                             .font(.system(size: 30))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .frame(width: 50, height: 50)
                             .sheet(isPresented: $AccountSheet) {
                                 AccountSheetView()
@@ -40,7 +41,7 @@ struct Home: View {
                     } label: {
                         Image(systemName: "gearshape")
                             .font(.system(size: 30))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .frame(width: 50, height: 50)
                             .sheet(isPresented: $buttonSheet) {
                                 BottomSheetView()
@@ -52,7 +53,8 @@ struct Home: View {
                     
    
                 }
-                
+                    .frame(height: 44)
+
                
                 Spacer()
 
@@ -84,7 +86,7 @@ struct Home: View {
                             
                             
                             Section("General") {
-
+ 
                                 Toggle("Notification", isOn: $isToggled)
 
                                 
@@ -113,6 +115,7 @@ struct Home: View {
 
                                 })
                                 
+    Text("Drops")
 
                             }
                             
@@ -211,10 +214,7 @@ struct Home: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 60, height: 60)
-                //                    .scale(1.0)
-                //                    .size(width: 40, height: 40)
                 Text("okay")
-                //
                 
             }
             
@@ -267,12 +267,9 @@ struct Home: View {
                 }
             }
         }
-
+        
+      
     }
-    
-    
-    
-    
 
     struct AboutEleosView: View {
         var body: some View {
@@ -291,8 +288,6 @@ struct Home: View {
     }
     
     
-
-
     struct CreatorsView: View {
         var body: some View {
             Form {
