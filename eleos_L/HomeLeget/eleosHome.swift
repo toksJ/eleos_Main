@@ -9,7 +9,9 @@ import SwiftUI
 
 struct EloesHome: View {
     @Environment(\.dismiss) var dismiss
-    
+    @State var buttonSheet = false
+    @State var AccountSheet = false
+
     var body: some View {
         VStack(spacing: 8) {
             HStack {
@@ -18,10 +20,6 @@ struct EloesHome: View {
                     dismiss()
                 } label: {
                     HStack(spacing: 5) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 23).weight(.medium))
-                        .foregroundColor(.secondary)
-                        
                         Text("Eleos ✨")
                             .font(.title)
                             .foregroundColor(.primary)

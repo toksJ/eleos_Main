@@ -17,10 +17,7 @@ struct Home: View {
         ZStack{
             VStack(alignment: .leading){
                 HStack {
-                    Text("eleos")
-                        .italic()
-                        .bold()
-                        .font(.system(size: 30))
+                    
                         
                     Spacer()
                     
@@ -56,9 +53,7 @@ struct Home: View {
    
                 }
                 
-                Text("Get Things Done")
-                    .italic()
-                    .padding(-10)
+               
                 Spacer()
 
             }
@@ -90,11 +85,7 @@ struct Home: View {
                             
                             Section("General") {
                                 
-//                                NavigationLink(destination: NotificationView(), label: {
-//                                    Text("Notification")
-//
-//
-//                                })
+
                                 Toggle("Notification", isOn: $isToggled)
 
                                 
@@ -123,24 +114,7 @@ struct Home: View {
 
                                 })
                                 
-//                                NavigationLink(destination: QuestionsView(), label: {
-//                                    Text("Questions")
-//                                    Image(systemName: "questionmark.folder.fill").offset(x: 175)
-//
-//                                })
-//                                NavigationLink(destination: ToDoListView(), label: {
-//                                    Text("To-Do List")
-//                                    Image(systemName: "list.bullet.clipboard.fill").offset(x: 175)
-//
-//                                })
-//                                NavigationLink(destination: DropsView(), label: {
-//                                    Text("Drops")
-//                                    Image(systemName: "pipe.and.drop.fill").offset(x: 205)
-//                                })
-//                                NavigationLink(destination: PlantsView(), label: {
-//                                    Text("Plants")
-//                                    Image(systemName: "arrow.up.bin.fill").offset(x: 205)
-//                                })
+
                             }
                             
                             Section("More"){
@@ -295,39 +269,8 @@ struct Home: View {
             }
         }
         
-        //        let email = "eleosmanaging@gmail.com"
-        //
-        //        if let url = URL(string: "mailto:\(email)") {
-        //            if #available(iOS 10.0, *) {
-        //                UIApplication.shared.open(url)
-        //            } else {
-        //                UIApplication.shared.openURL(url)
-        //
-        //            }
-        //        }
-        //            }
-        //email attempt
-    }
-    
-    
-    
-    
-//    struct QuestionsView: View {
-//        var body: some View {
-//            Form {
-//                Section("Questions") {
-//
-//                    Text("The questions only show up when ur a new member of the app! We evaluated ur self tolerance level based on ur answers to the questions that you wer asked.")
-//
-//
-//                }
-//                .multilineTextAlignment(.leading)
-//
-//            }
-//
-//        }
-//    }
-//
+ 
+ 
     struct AboutEleosView: View {
         var body: some View {
             Form {
@@ -344,49 +287,7 @@ struct Home: View {
         }
     }
     
-    
-//
-//    struct ToDoListView: View {
-//        var body: some View {
-//            Form {
-//                Section("To-Do List") {
-//
-//                    Text("The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.")
-//
-//                }
-//                .multilineTextAlignment(.leading)
-//
-//            }
-//
-//        }
-//    }
-//    struct DropsView: View {
-//        var body: some View {
-//            Form {
-//                Section("Drops") {
-//
-//                    Text("Drops are a form of reward points u receive each time u cross of a certain amount of ur to dos. Drops will help u unlock certain plants and allow u to make these plants grow.")
-//
-//                }
-//                .multilineTextAlignment(.leading)
-//
-//            }
-//
-//        }
-//    }
-//    struct PlantsView: View {
-//        var body: some View {
-//            Form {
-//                Section("Plants") {
-//
-//                    Text("The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive! ")
-//
-//                }
-//                .multilineTextAlignment(.leading)
-//            }
-//
-//        }
-//    }
+
     struct CreatorsView: View {
         var body: some View {
             Form {
