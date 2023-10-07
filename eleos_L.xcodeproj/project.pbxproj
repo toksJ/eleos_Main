@@ -39,6 +39,14 @@
 		EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */; };
 		EC5889062A980E9F00FF3A5A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5889052A980E9F00FF3A5A /* Task.swift */; };
 		EC5889102A981B0A00FF3A5A /* PlayfairDisplay-Regular in Resources */ = {isa = PBXBuildFile; fileRef = EC58890F2A981B0A00FF3A5A /* PlayfairDisplay-Regular */; };
+		ECABDB4C2AD1FC4B00BA7AE7 /* shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB4B2AD1FC4B00BA7AE7 /* shapes.swift */; };
+		ECABDB4E2AD1FC6100BA7AE7 /* forecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB4D2AD1FC6100BA7AE7 /* forecastModel.swift */; };
+		ECABDB502AD1FC7400BA7AE7 /* ForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB4F2AD1FC7400BA7AE7 /* ForecastCard.swift */; };
+		ECABDB522AD1FC9400BA7AE7 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB512AD1FC9400BA7AE7 /* Blur.swift */; };
+		ECABDB542AD1FCAF00BA7AE7 /* extesions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB532AD1FCAF00BA7AE7 /* extesions.swift */; };
+		ECABDB562AD1FCC200BA7AE7 /* Scrollers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB552AD1FCC200BA7AE7 /* Scrollers.swift */; };
+		ECABDB582AD1FCD900BA7AE7 /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB572AD1FCD900BA7AE7 /* HomeWidget.swift */; };
+		ECABDB5A2AD1FCEC00BA7AE7 /* eleosHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABDB592AD1FCEC00BA7AE7 /* eleosHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +83,14 @@
 		EC5889032A980E7A00FF3A5A /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		EC5889052A980E9F00FF3A5A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		EC58890F2A981B0A00FF3A5A /* PlayfairDisplay-Regular */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "PlayfairDisplay-Regular"; sourceTree = "<group>"; };
+		ECABDB4B2AD1FC4B00BA7AE7 /* shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shapes.swift; sourceTree = "<group>"; };
+		ECABDB4D2AD1FC6100BA7AE7 /* forecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forecastModel.swift; sourceTree = "<group>"; };
+		ECABDB4F2AD1FC7400BA7AE7 /* ForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCard.swift; sourceTree = "<group>"; };
+		ECABDB512AD1FC9400BA7AE7 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		ECABDB532AD1FCAF00BA7AE7 /* extesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extesions.swift; sourceTree = "<group>"; };
+		ECABDB552AD1FCC200BA7AE7 /* Scrollers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrollers.swift; sourceTree = "<group>"; };
+		ECABDB572AD1FCD900BA7AE7 /* HomeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidget.swift; sourceTree = "<group>"; };
+		ECABDB592AD1FCEC00BA7AE7 /* eleosHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eleosHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +194,7 @@
 				C492689F2ACAF358003EA6F0 /* Todos */,
 				EC5888AB2A95512E00FF3A5A /* CircularProgressView.swift */,
 				EC58889F2A94D7EB00FF3A5A /* Home.swift */,
+				ECABDB4A2AD1FC3700BA7AE7 /* HomeLeget */,
 				EC58886D2A93AE1700FF3A5A /* Assets.xcassets */,
 				EC58886F2A93AE1700FF3A5A /* Preview Content */,
 			);
@@ -213,6 +230,21 @@
 				EC5888992A94D42300FF3A5A /* FinalView.swift */,
 			);
 			path = "question view";
+			sourceTree = "<group>";
+		};
+		ECABDB4A2AD1FC3700BA7AE7 /* HomeLeget */ = {
+			isa = PBXGroup;
+			children = (
+				ECABDB4B2AD1FC4B00BA7AE7 /* shapes.swift */,
+				ECABDB4D2AD1FC6100BA7AE7 /* forecastModel.swift */,
+				ECABDB4F2AD1FC7400BA7AE7 /* ForecastCard.swift */,
+				ECABDB512AD1FC9400BA7AE7 /* Blur.swift */,
+				ECABDB532AD1FCAF00BA7AE7 /* extesions.swift */,
+				ECABDB552AD1FCC200BA7AE7 /* Scrollers.swift */,
+				ECABDB572AD1FCD900BA7AE7 /* HomeWidget.swift */,
+				ECABDB592AD1FCEC00BA7AE7 /* eleosHome.swift */,
+			);
+			path = HomeLeget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,13 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECABDB582AD1FCD900BA7AE7 /* HomeWidget.swift in Sources */,
+				ECABDB522AD1FC9400BA7AE7 /* Blur.swift in Sources */,
 				EC5888962A94D3D800FF3A5A /* QuizModel.swift in Sources */,
 				C4C65C5B2A9B2D360019383C /* PlantDetailview.swift in Sources */,
 				EC5889022A980E5E00FF3A5A /* DataValue.swift in Sources */,
+				ECABDB4E2AD1FC6100BA7AE7 /* forecastModel.swift in Sources */,
+				ECABDB4C2AD1FC4B00BA7AE7 /* shapes.swift in Sources */,
 				EC58886C2A93AE1400FF3A5A /* ContentView.swift in Sources */,
 				C49268A32ACAF414003EA6F0 /* CreateTodoView.swift in Sources */,
 				EC5888A42A94D80800FF3A5A /* Schedule.swift in Sources */,
 				EC5888982A94D40200FF3A5A /* QuizView.swift in Sources */,
+				ECABDB562AD1FCC200BA7AE7 /* Scrollers.swift in Sources */,
 				C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */,
 				C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */,
 				EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */,
@@ -301,6 +338,7 @@
 				C49268AF2ACAF514003EA6F0 /* TodoManager.swift in Sources */,
 				C4C65C842A9B75370019383C /* DropsRequiredView.swift in Sources */,
 				EC5888A02A94D7EB00FF3A5A /* Home.swift in Sources */,
+				ECABDB542AD1FCAF00BA7AE7 /* extesions.swift in Sources */,
 				C4C65C5E2A9B2D810019383C /* Plant Struct.swift in Sources */,
 				EC5889042A980E7A00FF3A5A /* CustomDataPicker.swift in Sources */,
 				C49268A72ACAF480003EA6F0 /* TodoDetailView.swift in Sources */,
@@ -311,9 +349,11 @@
 				EC58886A2A93AE1400FF3A5A /* eleos_LApp.swift in Sources */,
 				C492689E2ACAEA28003EA6F0 /* CounterView.swift in Sources */,
 				EC5888AC2A95512E00FF3A5A /* CircularProgressView.swift in Sources */,
+				ECABDB5A2AD1FCEC00BA7AE7 /* eleosHome.swift in Sources */,
 				EC58889E2A94D7CE00FF3A5A /* TabsView.swift in Sources */,
 				C49268B12ACAF54D003EA6F0 /* Todo+sample.swift in Sources */,
 				C4C65C602A9B2D950019383C /* PlantData.swift in Sources */,
+				ECABDB502AD1FC7400BA7AE7 /* ForecastCard.swift in Sources */,
 				EC5889062A980E9F00FF3A5A /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
