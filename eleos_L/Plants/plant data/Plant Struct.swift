@@ -16,4 +16,6 @@ struct Plant: Identifiable {
     var plantHeadline: String
     var plantDescription : String
     var dropsNeeded : Int
+    var waterIntake : Int
+    var Stages :Int = 3
 }

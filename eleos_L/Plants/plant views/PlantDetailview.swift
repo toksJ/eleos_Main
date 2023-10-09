@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PlantDetailView: View {
+    var counter = CounterView(todoManager: TodoManager()).todosDone
     var plant : Plant
-    
+    @State var dropsGiven = 0
     var body: some View {
         NavigationView{
             ScrollView() {
@@ -45,11 +46,14 @@ struct PlantDetailView: View {
                             .padding()
                         Spacer()
                         // actions
+                        CircularProgressView(progress: 0.2, score: 2, totalLevels: plant.dropsNeeded)
+                            .scaledToFit()
+                            .padding(20)
+
                         HStack{
                             Spacer()
                             Button{
-                                print("no longer thirsty plant")
-                                
+                                dropsGiven = counter-plant.dropsNeeded
                             }label: {
                                 Text("water the plant!")
                             }
