@@ -46,7 +46,7 @@ struct PlantDetailView: View {
                             .padding()
                         Spacer()
                         // actions
-                        CircularProgressView(progress: 0.2, score: 2, totalLevels: plant.dropsNeeded)
+                        CircularProgressView(progress: 0.2,plant: plant, score: 2, totalLevels: plant.dropsNeeded)
                             .scaledToFit()
                             .padding(20)
 

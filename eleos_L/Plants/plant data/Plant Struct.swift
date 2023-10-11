@@ -18,4 +18,5 @@ struct Plant: Identifiable {
     var dropsNeeded : Int
     var waterIntake : Int
     var Stages :Int = 3
+    var isMonstera = false
 }

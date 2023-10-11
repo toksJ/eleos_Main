@@ -10,6 +10,7 @@ import SwiftUI
 struct CircularProgressView: View {
     
     var progress: CGFloat
+    var plant : Plant
     var score: Int
     var totalLevels: Int
 
@@ -30,10 +31,10 @@ struct CircularProgressView: View {
                     .foregroundColor(Color("Purple"))
                     .rotationEffect(Angle(degrees: 270))
                 
-                Image("monstera")
+                Image(plant.plantFullPic)
                     .resizable()
                     .scaledToFit()
-                    .offset(x: 25, y: -8)
+//                    .offset(x: 25, y: -8)
 
             }
             .padding()
@@ -95,7 +96,7 @@ struct CircularProgressView: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularProgressView(progress: 0.3, score: 1, totalLevels: 3)
+        CircularProgressView(progress: 0.3, plant: plantsData[0], score: 1, totalLevels: 3)
     }
 }
 

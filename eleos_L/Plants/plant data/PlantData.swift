@@ -9,7 +9,7 @@ import SwiftUI
 
 var plantsData : [Plant] = [
     Plant(plantName: "Monstera", plantPic: "monstera icon",plantFullPic: "monstera2", plantHeadline: "Vibrant greenery and iconic splits converge for a touch of natural artistry.",
-          plantDescription: "Monstera deliciosa, commonly called split-leaf philodendron or swiss cheese plant, is a climbing, evergreen perennial vine that is perhaps most noted for its large glossy leaves that are dissected with deep splits and perforated with oblong holes. Does not have to be watered very often.", dropsNeeded: 10, waterIntake: 2),
+          plantDescription: "Monstera deliciosa, commonly called split-leaf philodendron or swiss cheese plant, is a climbing, evergreen perennial vine that is perhaps most noted for its large glossy leaves that are dissected with deep splits and perforated with oblong holes. Does not have to be watered very often.", dropsNeeded: 10, waterIntake: 2, isMonstera: true),
     
     Plant(plantName: "Peace Lily", plantPic: "peace lily icon",
           plantFullPic: "peace lily2", plantHeadline: "Elegant white blooms and lush foliage.",
