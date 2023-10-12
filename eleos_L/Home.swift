@@ -109,8 +109,7 @@ struct Home: View {
                             Section("More"){
                                 NavigationLink(destination: CreatorsView(), label: {
                                     HStack {
-                                        Image(systemName: "person.circle.fill")
-                                            .font(.title2)
+                                        Image(systemName: "person.2.fill")
                                         Text("About Us")
                                     }
 
@@ -121,8 +120,11 @@ struct Home: View {
                             Section("Logout"){
                                 NavigationLink(destination: ContentView(), label: {
                                     HStack {
-                                        Image(systemName: "person.2.fill")
+                                        Image(systemName: "person.crop.circle")
+                                            .font(.title2)
+                                            .foregroundStyle(.red)
                                         Text("Sign Out")
+                                            .foregroundStyle(.red)
                                     }
                                     
                                     
@@ -153,39 +155,39 @@ struct Home: View {
         }
         
     }
-//    struct NotificationView: View {
-//        @State private var isToggled1 = false
-//        @State private var isToggled2 = false
-//        @State private var isToggled3 = false
-//
-//
-//        
-//        var body: some View {
-//            Form {
-//                
-//                Toggle("Mute until unmuted", isOn: $isToggled1)
-//                
-//                if isToggled1 {
-//                    Text("Muted")
-//                        .font(.system(size: 12, weight: .light, design: .default))
-//                }
-//                Toggle("Mute for a day", isOn: $isToggled2)
-//                
-//                if isToggled2 {
-//                    Text("Muted for a day")
-//                        .font(.system(size: 12, weight: .light, design: .default))
-//                }
-//                Toggle("Mute for an hour", isOn: $isToggled3)
-//                
-//                if isToggled3 {
-//                    Text("Muted for an hour")
-//                        .font(.system(size: 12, weight: .light, design: .default))
-//                }
-//            }
-//            
-//        }
-//                
-//    }
+    struct NotificationView: View {
+        @State private var isToggled1 = false
+        @State private var isToggled2 = false
+        @State private var isToggled3 = false
+
+
+        
+        var body: some View {
+            Form {
+                
+                Toggle("Mute until unmuted", isOn: $isToggled1)
+                
+                if isToggled1 {
+                    Text("Muted")
+                        .font(.system(size: 12, weight: .light, design: .default))
+                }
+                Toggle("Mute for a day", isOn: $isToggled2)
+                
+                if isToggled2 {
+                    Text("Muted for a day")
+                        .font(.system(size: 12, weight: .light, design: .default))
+                }
+                Toggle("Mute for an hour", isOn: $isToggled3)
+                
+                if isToggled3 {
+                    Text("Muted for an hour")
+                        .font(.system(size: 12, weight: .light, design: .default))
+                }
+            }
+            
+        }
+                
+    }
     
     
     
