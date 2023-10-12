@@ -263,8 +263,22 @@ struct Home: View {
         var body: some View {
             Form {
                 Section("Eleos") {
-                    
-                    Text("Questions:The questions only show up when ur a new member of the app. we evaluated ur self tolerance level based on ur answers to the questions                         To do list:The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.                                    Drops:Drops are a form of reward points u receive each time u cross of a certain amount of ur to dosDrops will help u unlock certain plants and allow u to make these plants grow.                                   Plants:The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive!                                                    Remember: Personal development is a journey, not a destination! :)")
+                    Section("Questions:"){
+                        Text("The questions only show up when ur a new member of the app. we evaluated ur self tolerance level based on ur answers to the questions")
+                    } 
+                    Section("To do list:"){
+                        Text("The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.")
+                             }
+                             Section("Drops:") {
+                            Text("Drops are a form of reward points u receive each time u cross of a certain amount of ur to dosDrops will help u unlock certain plants and allow u to make these plants grow.")
+                            
+                        }   
+                             Section("Plants:"){
+                            Text("The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive!")
+                        }
+                             Section("Remember:"){
+                            Text("Personal development is a journey, not a destination! :)")
+                        }
                     
                     
                 }
