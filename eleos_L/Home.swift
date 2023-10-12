@@ -3,7 +3,8 @@
 //  eleos_L
 //
 //  Created by TokaJaber on 22/08/2023.
-//
+//    dana_()
+
 
 import SwiftUI
 
@@ -22,19 +23,7 @@ struct Home: View {
                             .foregroundColor(.white)
                     Spacer()
                     
-                    Button {
-                        AccountSheet.toggle()
-                    } label: {
-                        Image(systemName: "person.crop.circle")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .frame(width: 50, height: 50)
-                            .sheet(isPresented: $AccountSheet) {
-                                AccountSheetView()
-                                    .presentationDetents([.height(730)])
-                            }
-                        
-                    }
+                    
                     
                     Button {
                         buttonSheet.toggle()
@@ -90,10 +79,7 @@ struct Home: View {
                                 Toggle("Notification", isOn: $isToggled)
 
                                 
-                                NavigationLink(destination: ApperanceView(), label: {
-                                    Text("Apperance")
-                                    Image(systemName: "paintbrush.fill").offset(x: 175)
-                                })
+                                
                             }
                             
                             Section("Help Center") {
@@ -110,19 +96,23 @@ struct Home: View {
                             Section("About The App"){
                                 
                                 NavigationLink(destination: AboutEleosView(), label: {
-                                    Text("About Eleos")
-                                    Image(systemName: "apps.iphone").offset(x: 175)
-
+                                    HStack {
+                                        Image(systemName: "apps.iphone")
+            
+                                            Text("About Eleos")
+                                                    }
+                                    
+                                    
                                 })
-                                
-    Text("Drops")
-
                             }
                             
                             Section("More"){
                                 NavigationLink(destination: CreatorsView(), label: {
-                                    Text("About us")
-                                    Image(systemName: "person.2.fill").offset(x: 175)
+                                    HStack {
+                                        Image(systemName: "person.circle.fill")
+                                            .font(.title2)
+                                        Text("About Us")
+                                    }
 
 
                                 })
@@ -163,39 +153,39 @@ struct Home: View {
         }
         
     }
-    struct NotificationView: View {
-        @State private var isToggled1 = false
-        @State private var isToggled2 = false
-        @State private var isToggled3 = false
-
-
-        
-        var body: some View {
-            Form {
-                
-                Toggle("Mute until unmuted", isOn: $isToggled1)
-                
-                if isToggled1 {
-                    Text("Muted")
-                        .font(.system(size: 12, weight: .light, design: .default))
-                }
-                Toggle("Mute for a day", isOn: $isToggled2)
-                
-                if isToggled2 {
-                    Text("Muted for a day")
-                        .font(.system(size: 12, weight: .light, design: .default))
-                }
-                Toggle("Mute for an hour", isOn: $isToggled3)
-                
-                if isToggled3 {
-                    Text("Muted for an hour")
-                        .font(.system(size: 12, weight: .light, design: .default))
-                }
-            }
-            
-        }
-                
-    }
+//    struct NotificationView: View {
+//        @State private var isToggled1 = false
+//        @State private var isToggled2 = false
+//        @State private var isToggled3 = false
+//
+//
+//        
+//        var body: some View {
+//            Form {
+//                
+//                Toggle("Mute until unmuted", isOn: $isToggled1)
+//                
+//                if isToggled1 {
+//                    Text("Muted")
+//                        .font(.system(size: 12, weight: .light, design: .default))
+//                }
+//                Toggle("Mute for a day", isOn: $isToggled2)
+//                
+//                if isToggled2 {
+//                    Text("Muted for a day")
+//                        .font(.system(size: 12, weight: .light, design: .default))
+//                }
+//                Toggle("Mute for an hour", isOn: $isToggled3)
+//                
+//                if isToggled3 {
+//                    Text("Muted for an hour")
+//                        .font(.system(size: 12, weight: .light, design: .default))
+//                }
+//            }
+//            
+//        }
+//                
+//    }
     
     
     
@@ -220,32 +210,10 @@ struct Home: View {
             
         }
     }
-    struct ApperanceView: View {
-        @State private var FontSize = 0
-        @State private var iconSize = 0.0
-        @State private var bgColor =
-                Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
-
-        var body: some View {
-            Form {
-                
-                Stepper(value: $FontSize, in: 0...10) {
-                    Text("Font size: \(FontSize)")
-                }
-                Text("the current icon size is ^[\(Int(iconSize)) icons avilable](inflect: true)")
-                Slider(value: $iconSize, in: 0...10)
-                
-                VStack {
-                            ColorPicker("Alignment Guides", selection: $bgColor)
-                        }
-                    }
-                
-            }
-            
-        }
+    
         
     }
-    
+
     struct PrivacyView: View {
         
         var body: some View {
@@ -260,13 +228,33 @@ struct Home: View {
             Form {
                 Section("Support") {
                     NavigationLink(destination: SupportView(), label: {
-                        Text("Contact us!")
-                        Image(systemName: "envelope").offset(x: 175)
+                        NavigationView{
+                            VStack{
+                                Link(destination:URL(string: "https://www.google.com")!, label: {
+                                    Label(
+                                        title: { Text("Contact Us!")
+                                                .bold()
+                                        },
+                                        icon: { Image(systemName: "envelope")
+                                                }
+                                    )
+                                    
+                                })
+                                
+                            }
+                        }
+                        .navigationTitle("links")
                     }
-                    )
+                
+
+//                        Text("Contact us!")
+//                        Image(systemName: "envelope").offset(x: 175)
+                    )}
+                                   
+                    
                 }
             }
-        }
+        
         
       
     }
@@ -276,7 +264,7 @@ struct Home: View {
             Form {
                 Section("Eleos") {
                     
-                    Text("all about eleos")
+                    Text("Questions:The questions only show up when ur a new member of the app. we evaluated ur self tolerance level based on ur answers to the questions                         To do list:The to do lists purpose is to help u organize ur schedule and chores a bit better by allowing u to add descriptions, priorities ur to dos, and add dead lines.                                    Drops:Drops are a form of reward points u receive each time u cross of a certain amount of ur to dosDrops will help u unlock certain plants and allow u to make these plants grow.                                   Plants:The plants can be unlocked and grown by the drops u earn when completing tasks. They aim to improve ur responsibility level by keeping them alive!                                                    Remember: Personal development is a journey, not a destination! :)")
                     
                     
                 }
