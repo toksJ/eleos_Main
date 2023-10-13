@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CircularProgressView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+
     var progress: CGFloat
     var plant : Plant
     var score: Int
@@ -18,6 +20,11 @@ struct CircularProgressView: View {
         
         VStack {
             ZStack{
+//                Image(colorScheme == .dark ? "bg 2":"bg 1")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 400, height: 400)
+//                    .offset(y:-120)
                 Circle()
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
