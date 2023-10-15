@@ -43,6 +43,7 @@ struct PlantHeaderView: View {
                 .frame(width: 300, height: 300)
                 .padding(20)
                 .scaleEffect(PlantAnimation ? 1.0 : 0.6)
+            
 
                 .onAppear(){
                     withAnimation(.easeOut(duration: 0.5)) {

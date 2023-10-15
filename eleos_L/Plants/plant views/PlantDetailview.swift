@@ -10,16 +10,18 @@ import SwiftUI
 struct PlantDetailView: View {
     var counter = CounterView(todoManager: TodoManager()).todosDone
     var plant : Plant
+    var waterGiven = 0
     @State var dropsGiven = 0
     var body: some View {
         NavigationView{
             ScrollView() {
                 VStack(alignment: .leading,spacing: 0) {
-                    // header
-                    PlantHeaderView(plant: plant)
-                    //title
                     
-                    HStack(alignment: .center, spacing: 30){
+                    
+                    PlantHeaderView(plant: plant)
+                
+                                    
+                 HStack(alignment: .center, spacing: 30){
                         Text(plant.plantName)
                             .font(.largeTitle)
                             .bold()
@@ -45,11 +47,9 @@ struct PlantDetailView: View {
                         Text(plant.plantDescription)
                             .padding()
                         Spacer()
-                        // actions
-                        CircularProgressView(progress: 0.2,plant: plant, score: 2, totalLevels: plant.dropsNeeded)
-                            .scaledToFit()
-                            .padding(20)
+                 //
 
+                        CircularProgressView(progress: CGFloat(plant.waterIntake)/10 ,plant: plant, score: 3, totalLevels: plant.Stages)
                         HStack{
                             Spacer()
                             Button{
