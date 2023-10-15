@@ -15,6 +15,7 @@
 		C49268AF2ACAF514003EA6F0 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49268AE2ACAF514003EA6F0 /* TodoManager.swift */; };
 		C49268B12ACAF54D003EA6F0 /* Todo+sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49268B02ACAF54D003EA6F0 /* Todo+sample.swift */; };
 		C49268B72ACD1F5C003EA6F0 /* DateFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49268B62ACD1F5C003EA6F0 /* DateFuncs.swift */; };
+		C494FABF2ADBB07A0018FF2B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C494FABE2ADBB07A0018FF2B /* Counter.swift */; };
 		C4C65C552A9B2CD90019383C /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C542A9B2CD90019383C /* PlantListView.swift */; };
 		C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */; };
 		C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C65C582A9B2D150019383C /* PlantRowView.swift */; };
@@ -58,6 +59,7 @@
 		C49268AE2ACAF514003EA6F0 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 		C49268B02ACAF54D003EA6F0 /* Todo+sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+sample.swift"; sourceTree = "<group>"; };
 		C49268B62ACD1F5C003EA6F0 /* DateFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFuncs.swift; sourceTree = "<group>"; };
+		C494FABE2ADBB07A0018FF2B /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		C4C65C542A9B2CD90019383C /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
 		C4C65C562A9B2CFA0019383C /* PlantHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantHeaderView.swift; sourceTree = "<group>"; };
 		C4C65C582A9B2D150019383C /* PlantRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRowView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				C49268A22ACAF414003EA6F0 /* CreateTodoView.swift */,
 				C49268A62ACAF480003EA6F0 /* TodoDetailView.swift */,
+				C492689D2ACAEA28003EA6F0 /* CounterView.swift */,
 				C49268A02ACAF3A1003EA6F0 /* MainTodoView.swift */,
 			);
 			path = "Todo Views";
@@ -130,6 +133,7 @@
 				C49268B62ACD1F5C003EA6F0 /* DateFuncs.swift */,
 				C49268AE2ACAF514003EA6F0 /* TodoManager.swift */,
 				C49268B02ACAF54D003EA6F0 /* Todo+sample.swift */,
+				C494FABE2ADBB07A0018FF2B /* Counter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,7 +155,6 @@
 				C4C65C582A9B2D150019383C /* PlantRowView.swift */,
 				C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */,
 				C4C65C832A9B75370019383C /* DropsRequiredView.swift */,
-				C492689D2ACAEA28003EA6F0 /* CounterView.swift */,
 			);
 			path = "plant views";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				EC5888A42A94D80800FF3A5A /* Schedule.swift in Sources */,
 				EC5888982A94D40200FF3A5A /* QuizView.swift in Sources */,
 				ECABDB562AD1FCC200BA7AE7 /* Scrollers.swift in Sources */,
+				C494FABF2ADBB07A0018FF2B /* Counter.swift in Sources */,
 				C4C65C572A9B2CFA0019383C /* PlantHeaderView.swift in Sources */,
 				C4C65C592A9B2D150019383C /* PlantRowView.swift in Sources */,
 				EC58889C2A94D44B00FF3A5A /* eleos_questionApp.swift in Sources */,

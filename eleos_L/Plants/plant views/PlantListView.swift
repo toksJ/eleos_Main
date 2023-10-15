@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlantListView: View {
     
+    @StateObject private var Count = Counter()
     var todoManager = TodoManager()
     var plants: [Plant] = plantsData
     

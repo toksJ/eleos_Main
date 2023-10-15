@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTodoListView: View {
     
+    @StateObject private var todoCount = Counter()
     @ObservedObject var todoManager : TodoManager
     @State private var showSheet = false
     @State private var showSampleDataalert = false
