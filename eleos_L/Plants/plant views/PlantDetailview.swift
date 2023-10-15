@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlantDetailView: View {
-    @StateObject private var todoCount = Counter()
+    @EnvironmentObject var dropCounter : DropCounter
     var plant : Plant
     var waterGiven = 0
     @State var dropsGiven = 0
@@ -54,7 +54,7 @@ struct PlantDetailView: View {
                         HStack{
                             Spacer()
                             Button{
-                                dropsGiven = todoCount.dropCount-plant.dropsNeeded
+                                dropsGiven = dropCounter.dropCount-plant.dropsNeeded
                             }label: {
                                 Text("water the plant!")
                             }

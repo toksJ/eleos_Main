@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Counter: ObservableObject {
+class DropCounter: ObservableObject {
     @Published var dropCount: Int = 0
 }

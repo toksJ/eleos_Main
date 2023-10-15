@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PlantListView: View {
-    
-    @StateObject private var Count = Counter()
+ 
+    @EnvironmentObject private var dropCounter : DropCounter
     var todoManager = TodoManager()
     var plants: [Plant] = plantsData
     
@@ -36,6 +36,7 @@ struct PlantListView: View {
     struct PlantListView_Previews: PreviewProvider {
         static var previews: some View {
             PlantListView(plants: plantsData)
+                .environmentObject(DropCounter())
         }
     }
 }

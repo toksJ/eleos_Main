@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct eleos_LApp: App {
+    
+    @StateObject var dropCounter = DropCounter()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dropCounter)
         }
     }
 }

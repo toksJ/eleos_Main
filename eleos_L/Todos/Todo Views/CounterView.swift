@@ -10,7 +10,7 @@ import SwiftUI
 struct CounterView: View {
     
     @ObservedObject var todoManager : TodoManager
-    @StateObject var Count = Counter()
+    @EnvironmentObject var dropCounter : DropCounter
     @State var todosDone : Int = 0
     
     var body: some View {
@@ -24,12 +24,12 @@ struct CounterView: View {
                     Image("drops")
                         .resizable()
                         .frame(width: 40,height: 40)
-                    Text("\(Count.dropCount)")
+                    Text("\(dropCounter.dropCount)")
                         .onAppear() {
                             for var todo in todoManager.todos{
                                 if todo.giveDrop && todo.isCompleted {
                                     withAnimation{
-                                        Count.dropCount+=1}
+                                        dropCounter.dropCount+=1}
                                     todo.giveDrop = false
                                 }
                             }
@@ -45,6 +45,7 @@ struct CounterView: View {
 }
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(todoManager: TodoManager() )
+        CounterView(todoManager: TodoManager())
+            .environmentObject(DropCounter())
     }
 }

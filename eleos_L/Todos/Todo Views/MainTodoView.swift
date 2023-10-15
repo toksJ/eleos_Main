@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTodoListView: View {
     
-    @StateObject private var todoCount = Counter()
+    @EnvironmentObject private var dropsCounter : DropCounter
     @ObservedObject var todoManager : TodoManager
     @State private var showSheet = false
     @State private var showSampleDataalert = false
@@ -99,6 +99,7 @@ struct MainTodoListView: View {
 struct MainTodoListView_Previews: PreviewProvider {
     static var previews: some View {
         MainTodoListView(todoManager: TodoManager())
+            .environmentObject(DropCounter())
     }
 }
 
