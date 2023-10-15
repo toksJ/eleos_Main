@@ -50,6 +50,7 @@ struct PlantDetailView: View {
                  //
 
                         CircularProgressView(progress: CGFloat(plant.waterIntake)/10 ,plant: plant, score: 3, totalLevels: plant.Stages)
+                            .offset(x:15)
                         HStack{
                             Spacer()
                             Button{

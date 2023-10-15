@@ -21,10 +21,10 @@ struct CircularProgressView: View {
         
         VStack {
             ZStack{
-//                Image(colorScheme == .dark ? "bg 2":"bg 1")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 400, height: 400)
+                //                Image(colorScheme == .dark ? "bg 2":"bg 1")
+                //                    .resizable()
+                //                    .scaledToFit()
+                //                    .frame(width: 400, height: 400)
                 
                 
                 Circle()
@@ -34,34 +34,59 @@ struct CircularProgressView: View {
                     .padding(25)
                 
                     .frame(width: 375, height: 375)
-                
-                
-                
+                //                    .onAppear{
+                //                        if plant.Stages == 1 {
+                //                            Image(plant.plantFullPic)
+                //                                .resizable()
+                //                                .scaledToFit()
+                //                                .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
+                //                                .frame(width: 300, height: 300)
+                //                                .onAppear(){
+                //                                    withAnimation(.easeOut(duration: 0.5)) {
+                //                                        PlantAnimation = true
+                //                                    }
+                //                                }
+                //                                .onDisappear(){
+                //                                    PlantAnimation = false
+                //                                }
+                //
+                //                        }
+                //
+                //                    }
                 Circle()
                     .trim(from: 0, to: progress)
                     .stroke(style: .init(lineWidth: 20.0,lineCap: .round,lineJoin: .round))
                     .foregroundColor(Color("Purple"))
                     .rotationEffect(Angle(degrees: 270))
                     .padding(25)
-                    
+                
                     .frame(width: 375, height: 375)
                 
-                Image(plant.plantFullPic)
-                    .resizable()
-                    .scaledToFit()
-                    .offset(x: plant.isMonstera ? 15 : 0, y: plant.isMonstera ? -4 : 0)
-                    .frame(width: 300, height: 300)
-                    .onAppear(){
-                        withAnimation(.easeOut(duration: 0.5)) {
-                            PlantAnimation = true
-                        }
-                        
-                    }
-                    .onDisappear(){
-                        PlantAnimation = false
-                    }
+                
+                
+                if plant.Stages == 1{
+                    Image(plant.plantBabyPic)
+                        .resizable()
+                        .scaledToFit()
+                        .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
+                        .frame(width: 300, height: 300)
+                    
+                } else if plant.Stages == 2{
+                    Image(plant.plantMidPic)
+                        .resizable()
+                        .scaledToFit()
+                        .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
+                        .frame(width: 300, height: 300)
+                    
+                }else if plant.Stages == 3{
+                    Image(plant.plantFullPic)
+                        .resizable()
+                        .scaledToFit()
+                        .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
+                        .frame(width: 300, height: 300)
+                }
             }
-                            }
+        }
             
             
             //            HStack(alignment:.center,spacing:2){
@@ -116,7 +141,7 @@ struct CircularProgressView: View {
         
     }
     
-    
+
     
     
     struct CircularProgressView_Previews: PreviewProvider {
@@ -124,5 +149,6 @@ struct CircularProgressView: View {
             CircularProgressView(progress: 0.3, plant: plantsData[0], score: 1, totalLevels: 3)
         }
     }
+    
     
 
