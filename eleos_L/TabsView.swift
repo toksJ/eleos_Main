@@ -29,11 +29,11 @@ struct TabsView: View {
                         Image(systemName: "leaf.fill")
                         Text("Plants")
                     }
-                Schedule()
-                    .tabItem {
-                        Image(systemName: "calendar.badge.clock")
-                        Text("Schedule")
-                    }
+//                Schedule()
+//                    .tabItem {
+//                        Image(systemName: "calendar.badge.clock")
+//                        Text("Schedule")
+//                    }
             }
             
         }
