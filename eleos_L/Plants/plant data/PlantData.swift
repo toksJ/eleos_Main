@@ -19,7 +19,7 @@ var plantsData : [Plant] = [
           plantFullPic: "lavender2",plantMidPic: "",plantBabyPic: "", plantHeadline: "Dreamy purple blooms that create a tranquil haven.",
           plantDescription: "This is a semi-woody plant that typically grows Narrow, gray-green leaves. Purple flowers appear in terminal spikes in late spring to early summer. Both foliage and flowers are highly aromatic. water generously!", dropsNeeded: 40, waterIntake: 4),
     
-    Plant(plantName: "Snake Plant", plantPic: "snake plant icon",plantFullPic: "",plantMidPic: "",
+    Plant(plantName: "Snake Plant", plantPic: "snake plant icon",plantFullPic: "snake plant2", plantMidPic: "",
           plantBabyPic: "snake plant2", plantHeadline: "Sword-like leaves that effortlessly blend strength and elegance.",
           plantDescription: "Snake plant is also called Mother in law’s tongue probably because of its sharp-edged leaves. This plant is the ultimate in lazy person’s landscaping. It’s drought tolerant so you don’t have to water it very often.", dropsNeeded: 30, waterIntake: 1),
     
