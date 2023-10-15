@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlantListView: View {
     
+    var todoManager = TodoManager()
     var plants: [Plant] = plantsData
     
     var body: some View {
@@ -20,9 +21,15 @@ struct PlantListView: View {
                         PlantRowView(plant: plant)
                     }// navigation link
                 }// list
-                .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
-               
+                
             }
+            .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                   CounterView(todoManager: todoManager)
+                }
+                }
+
         }
     }
     struct PlantListView_Previews: PreviewProvider {
