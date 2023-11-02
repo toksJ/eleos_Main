@@ -14,8 +14,8 @@ struct CircularProgressView: View {
     
     var progress: CGFloat
     var plant : Plant
-    var score: Int
-    var totalLevels: Int
+//    var score: Int
+//    var totalLevels: Int
     
     var body: some View {
         
@@ -146,7 +146,7 @@ struct CircularProgressView: View {
     
     struct CircularProgressView_Previews: PreviewProvider {
         static var previews: some View {
-            CircularProgressView(progress: 0.3, plant: plantsData[0], score: 1, totalLevels: 3)
+            CircularProgressView(progress: 0.3, plant: plantsData[0])
         }
     }
     
