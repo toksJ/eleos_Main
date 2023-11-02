@@ -63,22 +63,6 @@ struct CircularProgressView: View {
                     .frame(width: 375, height: 375)
                 
                 
-                
-                if plant.Stages == 1{
-                    Image(plant.plantBabyPic)
-                        .resizable()
-                        .scaledToFit()
-                        .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
-                        .frame(width: 300, height: 300)
-                    
-                } else if plant.Stages == 2{
-                    Image(plant.plantMidPic)
-                        .resizable()
-                        .scaledToFit()
-                        .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
-                        .frame(width: 300, height: 300)
-                    
-                }else if plant.Stages == 3{
                     Image(plant.plantFullPic)
                         .resizable()
                         .scaledToFit()
@@ -139,7 +123,7 @@ struct CircularProgressView: View {
         }
         
         
-    }
+    
     
 
     

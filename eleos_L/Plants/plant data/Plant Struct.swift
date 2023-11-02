@@ -14,15 +14,13 @@ struct Plant: Identifiable {
     //pics
     var plantPic: String
     var plantFullPic : String
-    var plantMidPic : String
-    var plantBabyPic : String
+
     //bs
     var plantHeadline: String
     var plantDescription : String
     //water
     var dropsNeeded : Int
     var waterIntake : Int
-    var Stages :Int = 3
     //???
     var isMonstera = false
 }

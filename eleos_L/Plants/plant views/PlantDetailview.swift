@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PlantDetailView: View {
+    
     @EnvironmentObject var dropCounter : DropCounter
     var plant : Plant
-    var waterGiven = 0
     @State var dropsGiven = 0
+    
     var body: some View {
         NavigationView{
             ScrollView() {
@@ -49,12 +50,14 @@ struct PlantDetailView: View {
                         Spacer()
                  //
 
-                        CircularProgressView(progress: CGFloat(plant.waterIntake)/10 ,plant: plant)
+                        CircularProgressView(progress: CGFloat(dropsGiven) ,plant: plant)
                             .offset(x:15)
                         HStack{
                             Spacer()
                             Button{
-                                dropsGiven = dropCounter.dropCount-plant.dropsNeeded
+                                if dropCounter.dropCount >= plant.dropsNeeded{
+                                    dropsGiven = dropCounter.dropCount-plant.dropsNeeded}
+                                
                             }label: {
                                 Text("water the plant!")
                             }
