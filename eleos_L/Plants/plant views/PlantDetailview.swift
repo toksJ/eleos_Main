@@ -69,8 +69,7 @@ struct PlantDetailView: View {
                             Button{
                                 if dropCounter.dropCount >= plant.waterIntake {
                                     dropsGiven += plant.waterIntake
-                                    dropCounter.dropCount - plant.waterIntake
-                                }
+                                    dropCounter.minus(plant.waterIntake)                                }
                                 else {
                                     notenoughwater = true
                                 }
