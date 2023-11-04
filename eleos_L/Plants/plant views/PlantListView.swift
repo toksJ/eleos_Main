@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PlantListView: View {
- 
+    
+    @EnvironmentObject var progressData: ProgressData
     @EnvironmentObject private var dropCounter : DropCounter
     var todoManager = TodoManager()
     var plants: [Plant] = plantsData
@@ -17,14 +18,18 @@ struct PlantListView: View {
         NavigationStack{
             List{
                 ForEach(plants) { plant in
-                    if plant.shouldShowNavigationLink {
-                        NavigationLink(destination: PlantDetailView(plant: plant)) {
-                            PlantRowView(plant: plant)}
+//                    if plant.shouldShowNavigationLink {
+                    NavigationLink(destination: PlantDetailView(plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
+                        PlantRowView(plant: plant)
+                            .opacity(plant.shouldShowNavigationLink ? 1.0 : 0.5)
+                    }
                     }// navigation link
                 }// list
+            .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
                 
             }
-            .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
+        
+          
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                    CounterView(todoManager: todoManager)
@@ -37,6 +42,7 @@ struct PlantListView: View {
         static var previews: some View {
             PlantListView(plants: plantsData)
                 .environmentObject(DropCounter())
+                .environmentObject(ProgressData())
         }
     }
-}
+
