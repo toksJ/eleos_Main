@@ -22,7 +22,7 @@ struct ProgressBar: View {
                     .cornerRadius(10)
                 
                 Rectangle()
-                    .frame(width: min(CGFloat(value / maxValue) * geometry.size.width, geometry.size.width), height: 10)
+                    .frame(width: min(CGFloat(value / maxValue) * geometry.size.width, geometry.size.width), height: 28)
                     .foregroundColor(Color("Purple"))
                     .animation(.linear(duration: 0.3))
                     .cornerRadius(10)

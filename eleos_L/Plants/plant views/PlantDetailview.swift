@@ -67,9 +67,9 @@ struct PlantDetailView: View {
                            
                             
                             Button{
-                                if dropCounter.dropCount >= plant.waterIntake{
-                                    dropsGiven += (dropCounter.dropCount-plant.waterIntake)
-                                    dropCounter.dropCount-plant.waterIntake
+                                if dropCounter.dropCount >= plant.waterIntake {
+                                    dropsGiven += plant.waterIntake
+                                    dropCounter.dropCount - plant.waterIntake
                                 }
                                 else {
                                     notenoughwater = true
@@ -111,5 +111,6 @@ struct PlantDetailView: View {
 struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetailView(plant: plantsData[0])
+            .environmentObject(DropCounter())
     }
 }
