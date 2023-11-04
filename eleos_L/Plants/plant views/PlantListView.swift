@@ -17,9 +17,9 @@ struct PlantListView: View {
         NavigationStack{
             List{
                 ForEach(plants) { plant in
-                    
-                    NavigationLink(destination: PlantDetailView(plant: plant)) {
-                        PlantRowView(plant: plant)
+                    if plant.shouldShowNavigationLink {
+                        NavigationLink(destination: PlantDetailView(plant: plant)) {
+                            PlantRowView(plant: plant)}
                     }// navigation link
                 }// list
                 

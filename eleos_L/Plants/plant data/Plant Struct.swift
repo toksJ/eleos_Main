@@ -23,4 +23,5 @@ struct Plant: Identifiable {
     var waterIntake : Int
     //???
     var isMonstera = false
+    var shouldShowNavigationLink: Bool = false
 }

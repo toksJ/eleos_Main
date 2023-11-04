@@ -12,15 +12,23 @@ struct PlantDetailView: View {
     @EnvironmentObject var dropCounter : DropCounter
     var plant : Plant
     @State var dropsGiven = 0
+    @State var notenoughwater = false
+
     
     var body: some View {
         NavigationView{
             ScrollView() {
                 VStack(alignment: .leading,spacing: 0) {
                     
-                    
-                    PlantHeaderView(plant: plant)
-                
+                    ZStack{
+                        PlantHeaderView(plant: plant)
+                        HStack{
+                            Spacer(minLength: 30)
+                            ProgressBar(value: Double(dropsGiven)/10, maxValue: Double(plant.dropsNeeded))
+                                .frame(height: 10)
+                            Spacer(minLength: 30)
+                        }.offset(y:150)
+                    }
                                     
                  HStack(alignment: .center, spacing: 30){
                         Text(plant.plantName)
@@ -49,15 +57,23 @@ struct PlantDetailView: View {
                             .padding()
                         Spacer()
                  //
-
-                        CircularProgressView(progress: CGFloat(dropsGiven) ,plant: plant)
-                            .offset(x:15)
+//
+                        
+                        
+//                        CircularProgressView(progress: CGFloat(dropsGiven) ,plant: plant)
+//                            .offset(x:15)
                         HStack{
                             Spacer()
+                           
+                            
                             Button{
-                                if dropCounter.dropCount >= plant.dropsNeeded{
-                                    dropsGiven = dropCounter.dropCount-plant.dropsNeeded}
-                                
+                                if dropCounter.dropCount >= plant.waterIntake{
+                                    dropsGiven += (dropCounter.dropCount-plant.waterIntake)
+                                    dropCounter.dropCount-plant.waterIntake
+                                }
+                                else {
+                                    notenoughwater = true
+                                }
                             }label: {
                                 Text("water the plant!")
                             }
@@ -65,9 +81,19 @@ struct PlantDetailView: View {
                             .foregroundColor(.white)
                             .background(Color("Purple"))
                             .cornerRadius(10)
+                            
                            Spacer()
                         }
+                        
+                        .alert(isPresented: $notenoughwater) {
+                            Alert(
+                                title: Text("Not enough water!!! work harder and gain more drops.💧🌱 "),
+                                 dismissButton: .cancel(Text("ok"))
+                                 )}
                     
+                        
+                        ///
+                        ///
                         
                         
                     }// vstack

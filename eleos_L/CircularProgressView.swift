@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CircularProgressView: View {
     
-    @Environment(\.colorScheme) var colorScheme
-    @State private var PlantAnimation = false
+//    @Environment(\.colorScheme) var colorScheme
+//    @State private var PlantAnimation = false
     
     var progress: CGFloat
     var plant : Plant
@@ -21,11 +21,6 @@ struct CircularProgressView: View {
         
         VStack {
             ZStack{
-                //                Image(colorScheme == .dark ? "bg 2":"bg 1")
-                //                    .resizable()
-                //                    .scaledToFit()
-                //                    .frame(width: 400, height: 400)
-                
                 
                 Circle()
                     .stroke(lineWidth: 20)
@@ -34,6 +29,7 @@ struct CircularProgressView: View {
                     .padding(25)
                 
                     .frame(width: 375, height: 375)
+                
                 //                    .onAppear{
                 //                        if plant.Stages == 1 {
                 //                            Image(plant.plantFullPic)
@@ -53,8 +49,9 @@ struct CircularProgressView: View {
                 //                        }
                 //
                 //                    }
+                
                 Circle()
-                    .trim(from: 0, to: progress)
+                    .trim(from: 0, to: CGFloat(progress)/10)
                     .stroke(style: .init(lineWidth: 20.0,lineCap: .round,lineJoin: .round))
                     .foregroundColor(Color("Purple"))
                     .rotationEffect(Angle(degrees: 270))
@@ -130,7 +127,7 @@ struct CircularProgressView: View {
     
     struct CircularProgressView_Previews: PreviewProvider {
         static var previews: some View {
-            CircularProgressView(progress: 0.3, plant: plantsData[0])
+            CircularProgressView(progress: 4, plant: plantsData[0])
         }
     }
     
