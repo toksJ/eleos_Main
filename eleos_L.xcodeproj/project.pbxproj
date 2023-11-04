@@ -157,6 +157,7 @@
 				C4C65C582A9B2D150019383C /* PlantRowView.swift */,
 				C4C65C5A2A9B2D360019383C /* PlantDetailview.swift */,
 				C4C65C832A9B75370019383C /* DropsRequiredView.swift */,
+				C4657AE92AF688EE0038FDFD /* ProgressBar.swift */,
 			);
 			path = "plant views";
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 		EC58885D2A93AE1400FF3A5A = {
 			isa = PBXGroup;
 			children = (
-				C4657AE92AF688EE0038FDFD /* ProgressBar.swift */,
 				EC5888682A93AE1400FF3A5A /* eleos_L */,
 				EC5888672A93AE1400FF3A5A /* Products */,
 			);

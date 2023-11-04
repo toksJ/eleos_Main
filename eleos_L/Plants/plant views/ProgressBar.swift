@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressBar: View {
     var value: Double
     var maxValue: Double
-    
+    @EnvironmentObject var progressData: ProgressData
     
     var body: some View {
         GeometryReader { geometry in
@@ -22,7 +22,7 @@ struct ProgressBar: View {
                     .cornerRadius(10)
                 
                 Rectangle()
-                    .frame(width: min(CGFloat(value / maxValue) * geometry.size.width, geometry.size.width), height: 28)
+                    .frame(width: min(CGFloat(progressData.progress / maxValue) * geometry.size.width, geometry.size.width), height: 28)
                     .foregroundColor(Color("Purple"))
                     .animation(.linear(duration: 0.3))
                     .cornerRadius(10)
@@ -33,4 +33,6 @@ struct ProgressBar: View {
 
 #Preview {
     ProgressBar(value: 1, maxValue: 10)
+        .environmentObject(ProgressData())
+                
 }

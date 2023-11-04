@@ -10,9 +10,12 @@ import SwiftUI
 struct PlantDetailView: View {
     
     @EnvironmentObject var dropCounter : DropCounter
+    @EnvironmentObject var progressData: ProgressData
+
     var plant : Plant
     @State var dropsGiven = 0
     @State var notenoughwater = false
+    @State var maxwater = false
 
     
     var body: some View {
@@ -24,7 +27,7 @@ struct PlantDetailView: View {
                         PlantHeaderView(plant: plant)
                         HStack{
                             Spacer(minLength: 30)
-                            ProgressBar(value: Double(dropsGiven)/10, maxValue: Double(plant.dropsNeeded))
+                            ProgressBar(value: Double(progressData.progress)/10, maxValue: Double(plant.dropsNeeded))
                                 .frame(height: 10)
                             Spacer(minLength: 30)
                         }.offset(y:150)
@@ -68,10 +71,14 @@ struct PlantDetailView: View {
                             
                             Button{
                                 if dropCounter.dropCount >= plant.waterIntake {
-                                    dropsGiven += plant.waterIntake
+                                    progressData.progress += Double(plant.waterIntake)
                                     dropCounter.minus(plant.waterIntake)                                }
                                 else {
                                     notenoughwater = true
+                                }
+                                
+                                if dropCounter.dropCount == plant.dropsNeeded {
+                                    maxwater = true
                                 }
                             }label: {
                                 Text("water the plant!")
@@ -86,10 +93,15 @@ struct PlantDetailView: View {
                         
                         .alert(isPresented: $notenoughwater) {
                             Alert(
-                                title: Text("Not enough water!!! work harder and gain more drops.💧🌱 "),
+                                title: Text(" ⭐️ Not enough water!!! work harder and gain more drops.💧🌱 "),
                                  dismissButton: .cancel(Text("ok"))
                                  )}
                     
+//                        .alert(isPresented: $maxwater) {
+//                            Alert(
+//                                title: Text(" ⭐️ CONGRATS!! your \(plant.plantName) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
+//                                 dismissButton: .cancel(Text("thanks!"))
+//                                 )}
                         
                         ///
                         ///
@@ -111,5 +123,6 @@ struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetailView(plant: plantsData[0])
             .environmentObject(DropCounter())
+            .environmentObject(ProgressData())
     }
 }

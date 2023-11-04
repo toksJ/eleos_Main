@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabsView: View {
     @StateObject var todoManager = TodoManager()
+    @EnvironmentObject var progressData: ProgressData
     var body: some View {
         
         TabView {
@@ -47,5 +48,7 @@ struct TabsView_Previews: PreviewProvider {
     static var previews: some View {
         TabsView()
             .environmentObject(DropCounter())
+            .environmentObject(ProgressData())
+
     }
 }

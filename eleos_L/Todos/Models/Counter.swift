@@ -10,6 +10,11 @@ import Foundation
 class DropCounter: ObservableObject {
     @Published var dropCount: Int = 0
     func minus (_ waterintake : Int){
-        dropCount -= waterintake
-    }
+        dropCount -= waterintake}
+    
+}
+
+
+class ProgressData: ObservableObject {
+    @Published var progress: Double = 0.0
 }
