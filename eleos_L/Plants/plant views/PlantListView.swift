@@ -19,7 +19,7 @@ struct PlantListView: View {
             List{
                 ForEach(plants) { plant in
 //                    if plant.shouldShowNavigationLink {
-                    NavigationLink(destination: PlantDetailView(plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
+                    NavigationLink(destination: PlantDetailView(plants: plantsData, plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
                         PlantRowView(plant: plant)
                             .opacity(plant.shouldShowNavigationLink ? 1.0 : 0.5)
                     }

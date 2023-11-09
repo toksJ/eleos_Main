@@ -11,12 +11,14 @@ struct PlantDetailView: View {
     
     @EnvironmentObject var dropCounter : DropCounter
     @EnvironmentObject var progressData: ProgressData
+    var plants : [Plant]
     var plant : Plant
-    @State var level = 0
     @State var isUnlocked : Bool
     
     @State var notenoughwater = false
     @State var maxwater = false
+    @State var level = 0
+    @State var Done = false
     
 
     
@@ -38,14 +40,14 @@ struct PlantDetailView: View {
                         }
                                         
                      HStack(alignment: .center, spacing: 30){
-                            Text(plant.Name)
+                         Text(plant.Name)
                                 .font(.largeTitle)
                                 .bold()
                                 .fontWeight(.heavy)
                                 .multilineTextAlignment(.leading)
                                 .padding()
                             Spacer(minLength: 0.1)
-                            DropsRequiredView(plant: plant)
+                         DropsRequiredView(plant: plant)
                                 .frame(width:100)
                             Spacer()
                             
@@ -72,30 +74,35 @@ struct PlantDetailView: View {
                             HStack{
                                 Spacer()
                                
-                                
-                                Button{
-                                    if dropCounter.dropCount >= plant.waterIntake {
-                                        progressData.progress += Double(plant.waterIntake)
-                                        dropCounter.minus(plant.waterIntake)
-                                    notenoughwater = false }
-                                    else {
-                                        notenoughwater = true
-                                    }
-                                    if dropCounter.dropCount >= plant.dropsNeeded {
-                                        plantsData[level+1].shouldShowNavigationLink = true
-                                        maxwater = true
+                                if Done == false{
+                                    Button{
+                                        if dropCounter.dropCount >= plant.waterIntake {
+                                            
+                                            progressData.progress += Double(plant.waterIntake)
+                                            dropCounter.minus(plant.waterIntake)
+                                            notenoughwater = false }
                                         
-                                        
+                                        else {
+                                            notenoughwater = true
+                                        }
+                                        if Int(progressData.progress) >= plant.dropsNeeded && level < 5 {
+                                            level += 1
+                                            plantsData[level].shouldShowNavigationLink = true
+                                            maxwater = true
+                                            Done = true
+                                            
+                                            
+                                            
+                                        }
                                     }
-                                }
-                                
-                            label: {
+                                    
+                                label: {
                                     Text("water the plant!")
                                 }
                                 .padding()
                                 .foregroundColor(.white)
                                 .background(Color("Purple"))
-                                .cornerRadius(10)
+                                    .cornerRadius(10)}
 
                                 
                                Spacer()
@@ -130,11 +137,11 @@ struct PlantDetailView: View {
                      dismissButton: .cancel(Text("ok"))
                      )}
         
-//            .alert(isPresented: $maxwater) {
-//                                    Alert(
-//                                        title: Text(" ⭐️ CONGRATS!! your \(plant.plantName) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
-//                                         dismissButton: .cancel(Text("thanks!"))
-//                                         )}
+            .alert(isPresented: $maxwater) {
+                                    Alert(
+                                        title: Text(" ⭐️ CONGRATS!! your \(plant.Name) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
+                                         dismissButton: .cancel(Text("thanks!"))
+                                         )}
 
             .navigationBarTitle(plant.Name,displayMode: .inline)
             .navigationBarHidden(true)
@@ -145,7 +152,7 @@ struct PlantDetailView: View {
 }
 struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantDetailView(plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink)
+        PlantDetailView(plants: plantsData, plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink )
             .environmentObject(DropCounter())
             .environmentObject(ProgressData())
     }

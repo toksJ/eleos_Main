@@ -24,6 +24,7 @@ struct Plant: Identifiable {
     var dropsNeeded : Int
     var waterIntake : Int
     var progress : Int = 0
+    var level : Int
     
     //???
     var isMonstera = false
