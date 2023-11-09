@@ -37,7 +37,7 @@ struct PlantHeaderView: View {
 //                }
 
             
-            Image(plant.plantFullPic)
+            Image(plant.FullPic)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)

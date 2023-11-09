@@ -13,18 +13,18 @@ struct PlantRowView: View {
     
     var body: some View {
         HStack{
-            Image(plant.plantPic)
+            Image(plant.Pic)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100,height: 100)
             
             VStack(alignment: .leading, spacing: 5){
-                Text(plant.plantName)
+                Text(plant.Name)
                     .font(.title2)
                     .bold()
                     
                 
-                Text(plant.plantHeadline)
+                Text(plant.Headline)
                     .font(.callout)
                     .foregroundColor(Color("font"))
                     .opacity(0.7)

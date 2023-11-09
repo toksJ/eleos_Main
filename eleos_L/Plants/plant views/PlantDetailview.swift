@@ -12,9 +12,12 @@ struct PlantDetailView: View {
     @EnvironmentObject var dropCounter : DropCounter
     @EnvironmentObject var progressData: ProgressData
     var plant : Plant
+    @State var level = 0
     @State var isUnlocked : Bool
+    
     @State var notenoughwater = false
     @State var maxwater = false
+    
 
     
     var body: some View {
@@ -35,7 +38,7 @@ struct PlantDetailView: View {
                         }
                                         
                      HStack(alignment: .center, spacing: 30){
-                            Text(plant.plantName)
+                            Text(plant.Name)
                                 .font(.largeTitle)
                                 .bold()
                                 .fontWeight(.heavy)
@@ -50,22 +53,22 @@ struct PlantDetailView: View {
                         }
                         
                         
-                        // description
+                        
                         VStack(alignment:.leading, spacing: 0){
+                            
                             Text("Description")
                                 .padding(.horizontal)
                                 .font(.title2)
                                 .bold()
                                 .foregroundColor(Color("font"))
-                            Text(plant.plantDescription)
+                            Text(plant.Description)
                                 .padding()
                             Spacer()
-                     //
-    //
+            
                             
                             
-    //                        CircularProgressView(progress: CGFloat(dropsGiven) ,plant: plant)
-    //                            .offset(x:15)
+                            
+                            
                             HStack{
                                 Spacer()
                                
@@ -73,43 +76,33 @@ struct PlantDetailView: View {
                                 Button{
                                     if dropCounter.dropCount >= plant.waterIntake {
                                         progressData.progress += Double(plant.waterIntake)
-                                        dropCounter.minus(plant.waterIntake)                                }
+                                        dropCounter.minus(plant.waterIntake)
+                                    notenoughwater = false }
                                     else {
                                         notenoughwater = true
                                     }
-                                    
-                                    if dropCounter.dropCount == plant.dropsNeeded {
+                                    if dropCounter.dropCount >= plant.dropsNeeded {
+                                        plantsData[level+1].shouldShowNavigationLink = true
                                         maxwater = true
+                                        
+                                        
                                     }
-                                }label: {
+                                }
+                                
+                            label: {
                                     Text("water the plant!")
                                 }
                                 .padding()
                                 .foregroundColor(.white)
                                 .background(Color("Purple"))
                                 .cornerRadius(10)
+
                                 
                                Spacer()
                             }
                             
-                            .alert(isPresented: $notenoughwater) {
-                                Alert(
-                                    title: Text(" ⭐️ Not enough water!!! work harder and gain more drops.💧🌱 "),
-                                     dismissButton: .cancel(Text("ok"))
-                                     )}
-                        
-    //                        .alert(isPresented: $maxwater) {
-    //                            Alert(
-    //                                title: Text(" ⭐️ CONGRATS!! your \(plant.plantName) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
-    //                                 dismissButton: .cancel(Text("thanks!"))
-    //                                 )}
-                            
-                            ///
-                            ///
-                            
-                            
-                        }// vstack
-                        
+            
+                        }
                         
                     }
                 }
@@ -121,22 +114,29 @@ struct PlantDetailView: View {
                             .multilineTextAlignment(.center)
                             .offset(y:200)
                         
-                        Text("do more tasks to unlock \(plant.plantName)!")
-                            .font(.system(size: 40))
+                        Text("do more tasks to unlock \(plant.Name)!")
+                            .font(.system(size: 30))
                             .multilineTextAlignment(.center)
                             .offset(y:200)
                     }
                         
-//                    Text("grow ur other plants to unlock" , plant.plantName + "!")
-//                        .font(.caption)
-//                        .bold()
-//                        .multilineTextAlignment(.center)
-//                        .padding(50)
-//                        .font(.system(size: 70))
+
 
                 }
-            }// vstack
-            .navigationBarTitle(plant.plantName,displayMode: .inline)
+            }
+            .alert(isPresented: $notenoughwater) {
+                Alert(
+                    title: Text(" ⭐️ Not enough water!!!💧🌱 "), message: Text(" work harder and gain more drops."),
+                     dismissButton: .cancel(Text("ok"))
+                     )}
+        
+//            .alert(isPresented: $maxwater) {
+//                                    Alert(
+//                                        title: Text(" ⭐️ CONGRATS!! your \(plant.plantName) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
+//                                         dismissButton: .cancel(Text("thanks!"))
+//                                         )}
+
+            .navigationBarTitle(plant.Name,displayMode: .inline)
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
         }// nav view
@@ -145,7 +145,7 @@ struct PlantDetailView: View {
 }
 struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantDetailView(plant: plantsData[0], isUnlocked: false)
+        PlantDetailView(plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink)
             .environmentObject(DropCounter())
             .environmentObject(ProgressData())
     }

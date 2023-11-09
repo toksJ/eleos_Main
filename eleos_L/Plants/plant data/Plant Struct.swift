@@ -10,17 +10,21 @@ import SwiftUI
 
 struct Plant: Identifiable {
     var id = UUID()
-    var plantName: String
+    var Name: String
+    
     //pics
-    var plantPic: String
-    var plantFullPic : String
+    var Pic: String
+    var FullPic : String
 
     //bs
-    var plantHeadline: String
-    var plantDescription : String
+    var Headline: String
+    var Description : String
+    
     //water
     var dropsNeeded : Int
     var waterIntake : Int
+    var progress : Int = 0
+    
     //???
     var isMonstera = false
     var shouldShowNavigationLink: Bool = false

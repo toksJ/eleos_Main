@@ -60,7 +60,7 @@ struct CircularProgressView: View {
                     .frame(width: 375, height: 375)
                 
                 
-                    Image(plant.plantFullPic)
+                    Image(plant.FullPic)
                         .resizable()
                         .scaledToFit()
                         .offset(x: plant.isMonstera ? 10 : 0, y: plant.isMonstera ? -4 : 0)
