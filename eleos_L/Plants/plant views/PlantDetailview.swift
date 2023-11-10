@@ -10,9 +10,9 @@ import SwiftUI
 struct PlantDetailView: View {
     
     @EnvironmentObject var dropCounter : DropCounter
-    @EnvironmentObject var progressData: ProgressData
+
     var plants : [Plant]
-    var plant : Plant
+    @State var plant : Plant
     @State var isUnlocked : Bool
     
     @State var notenoughwater = false
@@ -33,7 +33,7 @@ struct PlantDetailView: View {
                             PlantHeaderView(plant: plant)
                             HStack{
                                 Spacer(minLength: 30)
-                                ProgressBar(value: Double(progressData.progress)/10, maxValue: Double(plant.dropsNeeded))
+                                ProgressBar(value: Double(plant.progress), maxValue: Double(plant.dropsNeeded))
                                     .frame(height: 10)
                                 Spacer(minLength: 30)
                             }.offset(y:150)
@@ -78,20 +78,18 @@ struct PlantDetailView: View {
                                     Button{
                                         if dropCounter.dropCount >= plant.waterIntake {
                                             
-                                            progressData.progress += Double(plant.waterIntake)
+                                            plant.updateProgress()
                                             dropCounter.minus(plant.waterIntake)
                                             notenoughwater = false }
                                         
                                         else {
                                             notenoughwater = true
                                         }
-                                        if Int(progressData.progress) >= plant.dropsNeeded && level < 5 {
-                                            level += 1
-                                            plantsData[level].shouldShowNavigationLink = true
+                                        if Int(plant.progress) >= plant.dropsNeeded {
+                                        
+                                            plantsData[plant.level].shouldShowNavigationLink = true
                                             maxwater = true
                                             Done = true
-                                            
-                                            
                                             
                                         }
                                     }
@@ -154,6 +152,5 @@ struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetailView(plants: plantsData, plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink )
             .environmentObject(DropCounter())
-            .environmentObject(ProgressData())
     }
 }

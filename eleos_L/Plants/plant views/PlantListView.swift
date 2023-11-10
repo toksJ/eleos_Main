@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PlantListView: View {
     
-    @EnvironmentObject var progressData: ProgressData
     @EnvironmentObject private var dropCounter : DropCounter
     var todoManager = TodoManager()
     var plants: [Plant] = plantsData
@@ -26,15 +25,16 @@ struct PlantListView: View {
                     }// navigation link
                 }// list
             .navigationTitle("Plants 🪴୭ ˚.ᵎᵎ")
-                
-            }
-        
-          
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                    CounterView(todoManager: todoManager)
                 }
                 }
+
+                
+            }
+        
+          
 
         }
     }
@@ -42,7 +42,6 @@ struct PlantListView: View {
         static var previews: some View {
             PlantListView(plants: plantsData)
                 .environmentObject(DropCounter())
-                .environmentObject(ProgressData())
         }
     }
 

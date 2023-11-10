@@ -29,4 +29,8 @@ struct Plant: Identifiable {
     //???
     var isMonstera = false
     var shouldShowNavigationLink: Bool = false
+    
+    mutating func updateProgress(){
+        progress += waterIntake
+    }
 }
