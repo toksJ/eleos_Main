@@ -19,11 +19,11 @@ var plantsData : [Plant] = [
           FullPic: "lavender2", Headline: "Dreamy purple blooms that create a tranquil haven.",
            Description: "This is a semi-woody plant that typically grows Narrow, gray-green leaves. Purple flowers appear in terminal spikes in late spring to early summer. Both foliage and flowers are highly aromatic. water generously!", dropsNeeded: 40, waterIntake: 4, level: 3),
     
-    Plant (Name: "Snake Plant", Pic: "snake plant icon",FullPic: "snake 2", Headline: "Sword-like leaves that effortlessly blend strength and elegance.",
+    Plant (Name: "Snake Plant", Pic: "snake plant icon",FullPic: "snake plant 2", Headline: "Sword-like leaves that effortlessly blend strength and elegance.",
            Description: "Snake plant is also called Mother in law’s tongue probably because of its sharp-edged leaves. This is the ultimate plant in lazy person’s landscaping. It’s drought tolerant so you don’t have to water it very often.", dropsNeeded: 30, waterIntake: 1, level: 4),
     
     Plant (Name: "Prayer Plant ", Pic: "Prayer plant icon",
-           FullPic: "prayer 2", Headline: "Delicately-patterned leaves that seem to dance with life.", Description: "A perennial tropical plant that displays variegated oval-shaped leaves with smooth edges, which fold upward during the night, resembling hands held in prayer. these delicate plans thrive with frequent watering , so make sure to fulfill its water intake needs!", dropsNeeded: 50, waterIntake: 5, level: 4),
+           FullPic: "prayer plant 2", Headline: "Delicately-patterned leaves that seem to dance with life.", Description: "A perennial tropical plant that displays variegated oval-shaped leaves with smooth edges, which fold upward during the night, resembling hands held in prayer. these delicate plans thrive with frequent watering , so make sure to fulfill its water intake needs!", dropsNeeded: 50, waterIntake: 5, level: 4),
     
     ]
 
