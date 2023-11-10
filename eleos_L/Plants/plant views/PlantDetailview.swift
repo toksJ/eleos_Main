@@ -10,6 +10,7 @@ import SwiftUI
 struct PlantDetailView: View {
     
     @EnvironmentObject var dropCounter : DropCounter
+    @EnvironmentObject var progress : ProgressData
 
     var plants : [Plant]
     @State var plant : Plant
@@ -17,7 +18,7 @@ struct PlantDetailView: View {
     
     @State var notenoughwater = false
     @State var maxwater = false
-    @State var level = 0
+    @State var allPlantsCollected = false
     @State var Done = false
     
 
@@ -85,12 +86,15 @@ struct PlantDetailView: View {
                                         else {
                                             notenoughwater = true
                                         }
-                                        if Int(plant.progress) >= plant.dropsNeeded {
-                                        
-                                            plantsData[plant.level].shouldShowNavigationLink = true
+                                        if Int(plant.progress) >= plant.dropsNeeded && progress.level < 4 {
+                                            progress.level += 1
+                                            plantsData[progress.level].shouldShowNavigationLink = true
                                             maxwater = true
                                             Done = true
                                             
+//                                        }else if Int(plant.progress) >= plant.dropsNeeded && progress.level == 4{
+//                                            maxwater = true
+//                                            Done = true
                                         }
                                     }
                                     
@@ -140,6 +144,11 @@ struct PlantDetailView: View {
                                         title: Text(" ⭐️ CONGRATS!! your \(plant.Name) is fully nurtured!! 🥳🎉 "), message: Text("youre doing great!! keep it up :) 🍃"),
                                          dismissButton: .cancel(Text("thanks!"))
                                          )}
+//            .alert(isPresented: $allPlantsCollected) {
+//                                    Alert(
+//                                        title: Text(" ⭐️🌿 aren't you a hardworker?? you have unlocked all our plants!!!  "), message: Text("thank u for using our app 🎁 stay tuned for more updates :)) "),
+//                                         dismissButton: .cancel(Text("ok"))
+//                                         )}
 
             .navigationBarTitle(plant.Name,displayMode: .inline)
             .navigationBarHidden(true)
@@ -152,5 +161,6 @@ struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
         PlantDetailView(plants: plantsData, plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink )
             .environmentObject(DropCounter())
+            .environmentObject(ProgressData())
     }
 }
