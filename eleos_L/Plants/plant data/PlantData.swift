@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-class PlantData : ObservableObject {
+//class PlantData : ObservableObject {
     
-    @Published var plantsData : [Plant] = [
+     var plantsData : [Plant] = [
         Plant(Name: "Monstera", Pic: "monstera icon",FullPic: "monstera2", Headline: "Vibrant greenery and iconic splits converge for a touch of natural artistry.",
               Description: "Monstera deliciosa, commonly called split-leaf philodendron or swiss cheese , is a climbing, evergreen perennial vine that is perhaps most noted for its large glossy leaves that are dissected with deep splits and perforated with oblong holes. Does not have to be watered very often.", dropsNeeded: 10, waterIntake: 2, level: 1, isMonstera: true,shouldShowNavigationLink: true),
         
@@ -29,4 +29,4 @@ class PlantData : ObservableObject {
         
     ]
     
-}
+//}
