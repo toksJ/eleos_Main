@@ -11,6 +11,7 @@ struct PlantDetailView: View {
     
     @EnvironmentObject var dropCounter : DropCounter
     @EnvironmentObject var progress : ProgressData
+    @StateObject var plantManager = PlantManager()
 
     var plants : [Plant]
     @State var plant : Plant

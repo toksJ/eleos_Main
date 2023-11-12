@@ -10,13 +10,12 @@ import SwiftUI
 struct PlantListView: View {
     
     @EnvironmentObject private var dropCounter : DropCounter
+    @StateObject var plantManager = PlantManager()
     var todoManager = TodoManager()
-    var plants: [Plant] = plantsData
-    
     var body: some View {
         NavigationStack{
             List{
-                ForEach(plants) { plant in
+                ForEach($plantManager.plants) { $plant in
 //                    if plant.shouldShowNavigationLink {
                     NavigationLink(destination: PlantDetailView(plants: plantsData, plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
                         PlantRowView(plant: plant)
@@ -40,7 +39,7 @@ struct PlantListView: View {
     }
     struct PlantListView_Previews: PreviewProvider {
         static var previews: some View {
-            PlantListView(plants: plantsData)
+            PlantListView()
                 .environmentObject(DropCounter())
         }
     }
