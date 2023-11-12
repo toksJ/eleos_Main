@@ -9,15 +9,16 @@ import SwiftUI
 
 struct PlantListView: View {
     
-    @EnvironmentObject private var dropCounter : DropCounter
+
     @StateObject var plantManager = PlantManager()
-    var todoManager = TodoManager()
+    @StateObject var todoManager = TodoManager()
+    
     var body: some View {
         NavigationStack{
             List{
                 ForEach($plantManager.plants) { $plant in
 //                    if plant.shouldShowNavigationLink {
-                    NavigationLink(destination: PlantDetailView(plants: plantsData, plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
+                    NavigationLink(destination: PlantDetailView( plant: plant, isUnlocked: plant.shouldShowNavigationLink)) {
                         PlantRowView(plant: plant)
                             .opacity(plant.shouldShowNavigationLink ? 1.0 : 0.5)
                     }
@@ -40,7 +41,7 @@ struct PlantListView: View {
     struct PlantListView_Previews: PreviewProvider {
         static var previews: some View {
             PlantListView()
-                .environmentObject(DropCounter())
+               
         }
     }
 

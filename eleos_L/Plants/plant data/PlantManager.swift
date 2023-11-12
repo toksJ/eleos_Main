@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class PlantManager: ObservableObject {
-    var plants : [Plant] = [
+    @Published var plants : [Plant] = [
        Plant(Name: "Monstera", Pic: "monstera icon",FullPic: "monstera2", Headline: "Vibrant greenery and iconic splits converge for a touch of natural artistry.",
              Description: "Monstera deliciosa, commonly called split-leaf philodendron or swiss cheese , is a climbing, evergreen perennial vine that is perhaps most noted for its large glossy leaves that are dissected with deep splits and perforated with oblong holes. Does not have to be watered very often.", dropsNeeded: 10, waterIntake: 2, level: 1, isMonstera: true,shouldShowNavigationLink: true),
        
@@ -27,6 +27,18 @@ class PlantManager: ObservableObject {
        Plant (Name: "Prayer Plant ", Pic: "Prayer plant icon",
               FullPic: "prayer plant2", Headline: "Delicately-patterned leaves that seem to dance with life.", Description: "A perennial tropical plant that displays variegated oval-shaped leaves with smooth edges, which fold upward during the night, resembling hands held in prayer. these delicate plans thrive with frequent watering , so make sure to fulfill its water intake needs!", dropsNeeded: 50, waterIntake: 5, level: 4),
         ]
+    
+    
+ // dropcounter
+    @AppStorage("drop counter") var dropCount: Int = 1000
+    func minusDrops (_ waterintake : Int){
+        dropCount -= waterintake}
+
+    @AppStorage ("plant level") var level = 0
+
+    //
+    
+    
 //        didSet {
 //            save()
 //        }

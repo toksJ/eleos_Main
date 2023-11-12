@@ -9,12 +9,11 @@ import SwiftUI
 
 struct PlantDetailView: View {
     
-    @EnvironmentObject var dropCounter : DropCounter
-    @EnvironmentObject var progress : ProgressData
+//    @EnvironmentObject var dropCounter : DropCounter
+//    @EnvironmentObject var progress : ProgressData
     @StateObject var plantManager = PlantManager()
-
-    var plants : [Plant]
     @State var plant : Plant
+    
     @State var isUnlocked : Bool
     
     @State var notenoughwater = false
@@ -78,18 +77,18 @@ struct PlantDetailView: View {
                                
                                 if Done == false{
                                     Button{
-                                        if dropCounter.dropCount >= plant.waterIntake {
+                                        if plantManager.dropCount >= plant.waterIntake {
                                             
                                             plant.updateProgress()
-                                            dropCounter.minus(plant.waterIntake)
+                                            plantManager.minusDrops(plant.waterIntake)
                                             notenoughwater = false }
                                         
                                         else {
                                             notenoughwater = true
                                         }
-                                        if Int(plant.progress) >= plant.dropsNeeded && progress.level < 4 {
-                                            progress.level += 1
-                                            plantsData[progress.level].shouldShowNavigationLink = true
+                                        if Int(plant.progress) >= plant.dropsNeeded && plantManager.level < 4 {
+                                            plantManager.level += 1
+                                            plantsData[plantManager.level].shouldShowNavigationLink = true
                                             maxwater = true
                                             Done = true
                                             
@@ -160,8 +159,8 @@ struct PlantDetailView: View {
 }
 struct PlantDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlantDetailView(plants: plantsData, plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink )
-            .environmentObject(DropCounter())
-            .environmentObject(ProgressData())
+        PlantDetailView(plant: plantsData[0], isUnlocked: plantsData[0].shouldShowNavigationLink )
+//            .environmentObject(DropCounter())
+//            .environmentObject(ProgressData())
     }
 }

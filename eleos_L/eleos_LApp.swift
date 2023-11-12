@@ -10,14 +10,14 @@ import SwiftUI
 @main
 struct eleos_LApp: App {
     
-    @StateObject var dropCounter = DropCounter()
-    @StateObject var progressData = ProgressData()
+//    @StateObject var dropCounter = DropCounter()
+//    @StateObject var progressData = ProgressData()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(dropCounter)
-                .environmentObject(progressData)
+//                .environmentObject(dropCounter)
+//                .environmentObject(progressData)
         }
     }
 }
